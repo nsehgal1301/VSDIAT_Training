@@ -9,7 +9,7 @@
 
 
     
-<img src="./media/image1.png"
+<img src="./media/imagex.png"
 style="width:6.26806in;height:3.18125in" />
 
 ## **Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK**
@@ -88,12 +88,10 @@ ASIC design stands for Application Specific Integrated Circuits and it
 is the methodology of reducing the cost and size of the an electronic
 system or SoC. It consists of various components like –
 
-1.  RTL’s or HDL Code – Contains information to represent functionality.
-
-2.  PDK’s – Process Design Kit contains information for manufacturing
+ 1.  RTL’s or HDL Code – Contains information to represent functionality.
+ 2.  PDK’s – Process Design Kit contains information for manufacturing
     the correct technology.
-
-3.  EDA Tools – Required for simulation and connecting the simulation
+ 3.  EDA Tools – Required for simulation and connecting the simulation
     world to actual hardware.
 
 #### **Process Design Kits**
@@ -103,17 +101,12 @@ process data that will be required to manufacture the Hardware based on
 the Implemented RTL code. This data is used by different EDA tools to
 design an IC. It contains different type of information like –
 
-1.  DRC , LVS , PEX rules
-
-2.  Device Models
-
-3.  Liberties for Cell Characterization
-
-4.  Technology Files depicting the Manufacturing Technology Details
-
-5.  I/O libraries
-
-6.  Design Rule Manual etc.
+ 1.  DRC , LVS , PEX rules
+ 2.  Device Models
+ 3.  Liberties for Cell Characterization
+ 4.  Technology Files depicting the Manufacturing Technology Details
+ 5.  I/O libraries
+ 6.  Design Rule Manual etc.
 
 #### **Skywater 130nm Open PDK Example**
 
