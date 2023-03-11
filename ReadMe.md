@@ -1,9 +1,20 @@
+# **Table of Contents**
+- [Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK](#day--1-inception-of-open-source-eda-openlane-and-sky130-pdk)
+  - [Theory – Fundamentals of SoC](#theory--fundamentals-of-soc)
+  - [Theory - Understanding RISC-V Architecture](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/ReadMe.md#theory--understanding-risc-v-architecture)
+  - [Theory - Understanding ASIC Design Flow](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/ReadMe.md#theory--understanding-asic-design-flow) 
+    - [Process Design Kits](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/ReadMe.md#process-design-kits)
+    - [Skywater 130nm Open PDK Example](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/ReadMe.md#skywater-130nm-open-pdk-example)
+    - [RTL2GDS ASIC Design Flow](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/ReadMe.md#rtl2gds-asic-design-flow) 
+
+
+    
 <img src="./media/image1.png"
 style="width:6.26806in;height:3.18125in" />
 
-**#Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK**
+## **Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK**
 
-**##Theory – Fundamentals of SoC**
+### **Theory – Fundamentals of SoC**
 
 A simple package board can be represented using a simple block diagram
 in which the main brain of the board is it’s Processor/SoC and the SoC
@@ -11,7 +22,7 @@ needs to communicate to different blocks like RAM, DRAM, IO’s,
 ADC/DAC’s, UART/PCIe etc and for that it must have some output pins
 getting connected to each component through a package.
 
-<img src="./media/image2.png" style="width:6.26806in;height:3.58264in"
+<img src="./media/image2.png" width="601.7337600000001" height="343.93344"
 alt="Graphical user interface Description automatically generated with medium confidence" />
 
 Fig – 1. Simple Block Diagram of a SoC
@@ -27,7 +38,7 @@ contains all the I/O pads, level shifters, ESD cells etc for
 communicating to the outer world.
 
 <img src="./media/image3.png"
-style="width:3.38045in;height:2.74188in" /><img src="./media/image4.png" style="width:3.54287in;height:2.76372in"
+style="width:1.38045in;height:0.74188in" /><img src="./media/image4.png" style="width:1.54287in;height:0.76372in"
 alt="Graphical user interface Description automatically generated" />
 
 Fig 2 (a) Actual Structure of SoC with Wirebond (b) Zoomed version of
@@ -46,7 +57,7 @@ top level requirements.
 
 Fig 3. Depiction of different components of a RISC-V Architecture Core
 
-**Theory – Understanding RISC-V Architecture**
+###  **Theory – Understanding RISC-V Architecture**
 
 RISC-V is an open instruction set architecture and is way through which
 we can communicate with the computer. A computer code is initially
@@ -71,7 +82,7 @@ Format.
 
 Fig 5 –
 
-**Theory – Understanding ASIC Design Flow**
+### **Theory – Understanding ASIC Design Flow**
 
 ASIC design stands for Application Specific Integrated Circuits and it
 is the methodology of reducing the cost and size of the an electronic
@@ -85,7 +96,7 @@ system or SoC. It consists of various components like –
 3.  EDA Tools – Required for simulation and connecting the simulation
     world to actual hardware.
 
-**Process Design Kits**
+#### **Process Design Kits**
 
 Process Design Kits is basically a collection of different type of
 process data that will be required to manufacture the Hardware based on
@@ -104,7 +115,7 @@ design an IC. It contains different type of information like –
 
 6.  Design Rule Manual etc.
 
-**Skywater 130nm Open PDK Example**
+#### **Skywater 130nm Open PDK Example**
 
 Skywater 130nm is an open-access PDK created by Google and skywater,
 enabling complete ASIC design process to be open-source. Lower
@@ -115,7 +126,7 @@ perform automated tasks as manufacturing of 130nm is relatively much
 cheaper and it can readily used in places which doesn’t operate at High
 Speeds.
 
-**RTL2GDS ASIC Design Flow**
+#### **RTL2GDS ASIC Design Flow**
 
 There are various components of a simple RTL2GDS ASIC design flow and it
 converts the RTLs into corresponding GDSII format which is a must for
