@@ -1,9 +1,9 @@
 <img src="./media/image1.png"
 style="width:6.26806in;height:3.18125in" />
 
-##**Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK**
+**#Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK**
 
-**Theory – Fundamentals of SoC**
+**##Theory – Fundamentals of SoC**
 
 A simple package board can be represented using a simple block diagram
 in which the main brain of the board is it’s Processor/SoC and the SoC
