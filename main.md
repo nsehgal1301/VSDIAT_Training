@@ -2234,7 +2234,7 @@ start till and thereby following the chain like this.
 alt="Graphical user interface, text Description automatically generated" />
 </p>
 
-## **Theory – Routing Algorithm of TritonRoute  
+## **Theory – Routing Algorithm of TritonRoute**
 
 The algorithm used for TritonRoute is fairly simple and it basically
 stores the Point 1 to Point 2 multiple routes and their corresponding
