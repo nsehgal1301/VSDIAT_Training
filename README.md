@@ -11,7 +11,7 @@
     - [Process Design Kits](#process-design-kits)
     - [Skywater 130nm Open PDK Example](#skywater-130nm-open-pdk-example)
    - [Overview of RTL2GDS ASIC Design Flow](#theory---overview-of-rtl2gds-asic-design-flow) 
-   - [Theory – Introduction to OpenLane and Strive Chipset](#theory---introduction-to-openlane-and-strive-chipset)
+   - [Theory – Introduction to OpenLane and Strive Chipset](#theory--introduction-to-openlane-and-strive-chipset)
 
 
 # **Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK**
