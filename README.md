@@ -13,7 +13,54 @@
    - [Overview of RTL2GDS ASIC Design Flow](#theory---overview-of-rtl2gds-asic-design-flow) 
    - [Theory – Introduction to OpenLane and Strive Chipset](#theory--introduction-to-openlane-and-strive-chipset)
    - [Theory - OpenLane ASIC Flow](https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--openlane-asic-flow)
-   - 
+     - [](https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#openroad-app--)
+     - [](https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#logic-equivalence-checking-)
+     - [](https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#antenna-rule-violation-)
+   - [](https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--understanding-openlane-asic-flow)
+- [](https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#day--2-good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
+   - [](https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--utilization-factor-and-aspect-ratio)
+   - [](https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--concept-of-pre-placed-cells)
+   - [](https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--concept-of-power-planning)
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--running-floorplan-using-openlane
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--congestion-aware-placement-using-replace
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--circuit-design-step-and-233-layout-design-step
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--timing-characterization-parameters
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#day--3-design-library-cell-using-magic-layout-and-ngspice-characterization
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--ioplacer-experiment-for-equi-distant-bumps
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--steps-to-gitclone-vsdstdcelldesign
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--cmos-fabrication-process
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--introduction-to-sky130-basic-layers-layout-and-lef-using-inverter
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--calculating-the-characteristics-of-an-inverter-using-ngspice
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#falling-condition-delay-calculation-
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#rising-condition-delay-calculation-
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--introduction-to-drcs-and-downloading-drc-testcase
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--loading-sky130-tech-rules-in-magic
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--generating-the-poly9-error
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab---lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab---lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#day--4-pre-layout-timing-analysis-and-importance-of-a-good-clock-tree
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--introduction-to-delay-tables
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--extracting-lef-file-from-layout-file
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--data-preparation-for-including-custom-lef-inverter-in-openlane-flow
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--running-openlane-with-including-new-custom-inv-cell
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--resolving-huge-timing-violations-observed
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--understanding-static-timing-analysis
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--setting-up-sta-analysis-for-picorv32a-design-opensta
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--setting-up-sta-analysis-for-picorv32a-design-opensta-1
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--clock-tree-synthesis
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--clock-tree-synthesis
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--clock-net-shielding-and-crosstalks
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--running-cts-on-passed-sta-design-using-tritoncts
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--running-sta-again-on-post-cts-netlist
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#day--5-final-steps-for-rtl2gds-using-tritonroute-and-opensta
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--understanding-routing-algorithms
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--drc-checks-for-routing
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--creating-power-distribution-network-on-post-cts-design
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#created-pdn-details-and-statistics
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--understanding-tritonroute
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#theory--routing-algorithm-of-tritonroute
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#lab--routing-the-design-using-tritonroute
+https://github.com/nsehgal1301/VSDIAT_Training/blob/main/README.md#logs-and-reports-from-triton-route
 
 
 # **Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK**
