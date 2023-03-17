@@ -149,7 +149,7 @@ style="width:6.29375in;height:2.46422in" />
 <p align="center">
 <img src="./media/image9.png" style="width:6.36196in;height:2.37249in"
 alt="Diagram Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image10.png" style="width:6.36432in;height:2.32224in"
 alt="Diagram, bar chart Description automatically generated" />
 </p>
@@ -162,7 +162,7 @@ alt="Diagram, bar chart Description automatically generated" />
 <p align="center">
 <img src="./media/image11.png" style="width:6.41691in;height:2.1855in"
 alt="Chart, bar chart, waterfall chart Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image12.png"
 style="width:6.40031in;height:2.35732in" />
 </p>
@@ -216,7 +216,7 @@ and open EDA.
 <p align="center">
 <img src="./media/image16.png"
 style="width:7.0875in;height:3.21528in" />
-
+</p> <p align="center">
 <img src="./media/image17.png" style="width:7.0875in;height:4.41042in"
 alt="A picture containing graphical user interface Description automatically generated" />
 </p>
@@ -250,8 +250,8 @@ the best solution to be used as constraints for the flow.
 <img src="./media/image18.png"
 style="width:7.0875in;height:3.79167in" />
 </p>
-<p align="center"> Fig 14. OpenLane Design </p>
-Exploration Step
+<p align="center"> Fig 14. OpenLane Design Exploration Step </p>
+
 
 Figure below mentions the Flowchart of OpenLane ASIC Flow. This OpenLane
 Flow consists of many different types of open-source tools like yosys,
@@ -261,7 +261,7 @@ general flow deployed while using OpenLane.
 <p align="center">
 <img src="./media/image19.png" style="width:7.0875in;height:4.26319in"
 alt="Diagram Description automatically generated" />
-
+</p> <p align="center"> 
 <img src="./media/image20.png" style="width:7.0875in;height:5.0375in" />
 </p>
 ### **OpenROAD App -**
