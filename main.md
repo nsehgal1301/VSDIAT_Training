@@ -417,16 +417,20 @@ If all the cells in core takes up all the available space, then that is
 
 UF can be represented as = `(Area Utilized by Netlist) / (Area of the
 total chip)`
+
 <p align="center">
 <img src="./media/image36.png" style="width:7.0875in;height:5.26458in"
 alt="image" />
 </p>
+
 Suppose there is a netlist as shown below, that is, 2 flops and 2 logic
 gates only.
+
 <p align="center">
 <img src="./media/image37.png" style="width:7.0875in;height:2.26806in"
 alt="image" />
 </p>
+
 Now each of the cell can be represented in square dimension for ease of
 calculating the width and height of each cell. Give rough dimensions to
 each of the cell and calculate the dimension of netlist.
@@ -435,13 +439,16 @@ Each cell irrespective of the type of cell can be represented as
 rectangular block which is made up of some area and that area is overall
 calculated and added and finally utilization factor is applied to it for
 calculating the approximate area of a chip.
+
 <p align="center">
 <img src="./media/image38.png" style="width:3.46528in;height:2.74167in"
 alt="image" />
 </p>
+
 Now imagine a silicon wafer with many dies. Die has core inside it which
 contains all the logic. Die is a silicon material on which fabrication
 happens.
+
 <p align="center">
 <img src="./media/image39.png" style="width:3.56897in;height:2.7179in"
 alt="image" />
@@ -449,21 +456,25 @@ alt="image" />
 <img src="./media/image40.png" style="width:3.05139in;height:2.81042in"
 alt="image" />
 </p>
+
 ## **Theory – Concept of Pre-Placed Cells**
 
-Pre-placed cells --\> If there is large combinational circuit within our
+Pre-placed cells: If there is large combinational circuit within our
 complete chip, like circuit of 50k - 100k gates, we can implement that
 separately as a different module and then re-use it in our chip multiple
 times if needed. Or we can break that circuit further into sub circuits
 and create small blocks of it and use them separately. Using the
 periphery pins of these modules we can make the connections.
+
 <p align="center">
 <img src="./media/image41.png" style="width:7.0875in;height:1.59236in"
 alt="image" />
-</p><p align="center">
+</p>
+<p align="center">
 <img src="./media/image42.png" style="width:7.0875in;height:2.10694in"
 alt="image" />
 </p>
+
 - Similarly, there are certain IP's available, like, memory,
   clock-gating cell, comparator, mux etc.
 
@@ -487,33 +498,41 @@ capacitor respectively. But due to voltage drop across power grid this
 charging and discharging doesn't happen completely to 1 and 0
 respectively. We want the charging and discharging to be within the
 noise margin to interpret the logic correctly as 1 and 0 respectively.
+
 <p align="center">
 <img src="./media/image43.png" style="width:7.0875in;height:4.51042in"
 alt="image" />
-</p> <p align="center">
+</p> 
+<p align="center">
 <img src="./media/image44.png" style="width:7.0875in;height:4.28333in"
 alt="image" />
 </p>
+
 Noise Margin: If we refer to the below image, we say that for any signal
 to be treated as 1 or 0 it should be in the NMh and NMl ranges
 respectively. These undefined ranges are known as noise margins.
+
 <p align="center">
 <img src="./media/image45.png" style="width:7.0875in;height:3.19167in"
 alt="image" />
 </p>
+
 Now decoupling capacitors are bug capacitors sitting next to our cell,
 these are charged to full VDD initially, when nearby circuit switches it
 takes the required charge from this decoupling capacitor, similarly it
 can load off it's charge to this decoupling capacitor in case of 1 -\> 0
 switching. Therefore we surround the pre-placed cells with decoupling
 capacitors.
+
 <p align="center">
 <img src="./media/image46.png" style="width:7.0875in;height:4.24514in"
 alt="image" />
-</p> <p align="center">
+</p> 
+<p align="center">
 <img src="./media/image47.png" style="width:7.0875in;height:5.32986in"
 alt="image" />
 </p>
+
 ## **Theory – Concept of Power Planning**
 
 All the standard cells are placed in certain rows in an orderly fashion
@@ -527,37 +546,47 @@ distribution to reduce load are considered under the concept of
 PowerPlanning. Need for power needs to be identified within the chip and
 correspondingly decap cells or rails networks are placed to keep the IR
 drop minimum.
+
 <p align="center">
 <img src="./media/image48.png" style="width:7.0875in;height:4.40903in"
 alt="image" />
 </p>
+
 We cannot utilize the whole chip area some area needs to be kept for IO
 pad cells where the external signal and power will get connected. These
 are also active devices and the rails run within the core.
+
 <p align="center">
 <img src="./media/image49.png" style="width:6.02934in;height:4.10345in"
 alt="image" />
 </p>
+
 ## **Lab – Running Floorplan Using OpenLane**
 
 Reviewing the configuration filed, go to ***openlane -\>
 configuration*** there will lots of file containing the configuration
 parameters.
+
 <p align="center">
 <img src="./media/image50.png" style="width:7.19613in;height:1.98838in"
 alt="A picture containing text Description automatically generated" />
 </p>
+
 Open ReadMe and understand different variables that can be altered for
 design changes-
+
 <p align="center">
 <img src="./media/image51.png" style="width:7.366in;height:3.45205in" />
 </p>
+
 Setting used for defining different proc and parameters of floorplan are
 kept in floorplan.tcl shown below -
+
 <p align="center">
 <img src="./media/image52.png"
 style="width:6.98589in;height:5.38454in" />
 </p>
+
 Further another set of settings are defined in config.tcl and
 sky130_hs_fd_hd_config.tcl. Please note that all three tickles have
 different precedence order. Flow.tcl has the lowest precedence and it
@@ -566,38 +595,47 @@ increase in the following order –
 `Flow.tcl \< config.tcl \< sky130_hs_fd_hd_config.tcl`
 
 All the logs of the Floorplan are kept under the following directory –
+
 <p align="center">
 <img src="./media/image53.png"
 style="width:7.15321in;height:0.49893in" />
 </p>
+
 Floorplan will generate a very rough DEF file with only tap cells or
 decap cells as placement is not done and that is present under the
 results folder which can be viewed in Magic correspondingly using the
 command -
 
 `magic -T \<tech file\> read lef \<lef file\> read def \<def file\>`
+
 <p align="center">
 <img src="./media/image54.png"
 style="width:7.05389in;height:0.31885in" />
-</p> <p align="center">
+</p> 
+<p align="center">
 <img src="./media/image55.png"
 style="width:6.98921in;height:3.98864in" />
 </p>
+
 On further zooming into the region of lines we see that these are
 various tap cells and decap cells created during the floorplan however
 no standard cells are present in area for def because placement is still
 not complete and tool doesn’t know where to place the standard cells.
+
 <p align="center">
 <img src="./media/image56.png" style="width:4.79167in;height:4.625in"
 alt="Table Description automatically generated with medium confidence" />
 </p>
+
 Further, we zoom in to the bottom left corner and found that all the
 standard cells are kept at the corner since their placement information
 is not known. It is shown in the figure below –
+
 <p align="center">
 <img src="./media/image57.png" style="width:6.26806in;height:5.03194in"
 alt="Diagram Description automatically generated" />
 </p>
+
 ## **Lab – Congestion Aware Placement using RePlace**
 
 After running floorplan and viewing it in Magic, next steps are obvious
