@@ -10,7 +10,7 @@
   - [Theory - Understanding ASIC Design Flow](#theory--understanding-asic-design-flow) 
     - [Process Design Kits](#process-design-kits)
     - [Skywater 130nm Open PDK Example](#skywater-130nm-open-pdk-example)
-    - [RTL2GDS ASIC Design Flow](#theory--rtl2gds-asic-design-flow) 
+   - [RTL2GDS ASIC Design Flow](#theory--rtl2gds-asic-design-flow) 
 
 
 # **Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK**
