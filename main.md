@@ -220,8 +220,7 @@ style="width:7.0875in;height:3.21528in" />
 <img src="./media/image17.png" style="width:7.0875in;height:4.41042in"
 alt="A picture containing graphical user interface Description automatically generated" />
 </p>
-<p align="center"> Fig 13 (a) Depiction of a General Die (b) striVe open access family of
-chips </p>
+<p align="center"> Fig 13 (a) Depiction of a General Die (b) striVe open access family of chips </p>
 
 Main goal of OpenLane tool is to produce a GDS2 file automatically
 without any human intervention and the die created must be clean, by
@@ -397,12 +396,12 @@ definitions are shown below –
 <p align="center">
 <img src="./media/image34.png" style="width:7.29785in;height:3.63033in"
 alt="Text Description automatically generated" />
-
+</p><p align="center">
 <img src="./media/image35.png" style="width:7.24459in;height:1.95281in"
 alt="Text Description automatically generated" />
 </p>
-# **Day – 2 Good Floorplan vs Bad Floorplan and Introduction to Library
-Cells**
+
+# **Day – 2 Good Floorplan vs Bad Floorplan and Introduction to Library Cells**
 
 ## **Theory – Utilization Factor and Aspect Ratio**
 
@@ -445,7 +444,9 @@ contains all the logic. Die is a silicon material on which fabrication
 happens.
 <p align="center">
 <img src="./media/image39.png" style="width:3.56897in;height:2.7179in"
-alt="image" /><img src="./media/image40.png" style="width:3.05139in;height:2.81042in"
+alt="image" />
+</p><p align="center">
+<img src="./media/image40.png" style="width:3.05139in;height:2.81042in"
 alt="image" />
 </p>
 ## **Theory – Concept of Pre-Placed Cells**
@@ -459,7 +460,7 @@ periphery pins of these modules we can make the connections.
 <p align="center">
 <img src="./media/image41.png" style="width:7.0875in;height:1.59236in"
 alt="image" />
-
+</p><p align="center">
 <img src="./media/image42.png" style="width:7.0875in;height:2.10694in"
 alt="image" />
 </p>
@@ -489,7 +490,7 @@ noise margin to interpret the logic correctly as 1 and 0 respectively.
 <p align="center">
 <img src="./media/image43.png" style="width:7.0875in;height:4.51042in"
 alt="image" />
-
+</p> <p align="center">
 <img src="./media/image44.png" style="width:7.0875in;height:4.28333in"
 alt="image" />
 </p>
@@ -509,7 +510,7 @@ capacitors.
 <p align="center">
 <img src="./media/image46.png" style="width:7.0875in;height:4.24514in"
 alt="image" />
-
+</p> <p align="center">
 <img src="./media/image47.png" style="width:7.0875in;height:5.32986in"
 alt="image" />
 </p>
@@ -578,7 +579,7 @@ command -
 <p align="center">
 <img src="./media/image54.png"
 style="width:7.05389in;height:0.31885in" />
-
+</p> <p align="center">
 <img src="./media/image55.png"
 style="width:6.98921in;height:3.98864in" />
 </p>
@@ -612,7 +613,7 @@ below –
 <p align="center">
 <img src="./media/image58.png"
 style="width:7.16995in;height:0.92067in" />
-
+</p> <p align="center">
 <img src="./media/image59.png"
 style="width:7.20032in;height:0.88628in" />
 </p>
@@ -662,7 +663,7 @@ diagram to layout while we adhere to the rules given by foundary.
 <p align="center">
 <img src="./media/image64.png" style="width:7.0875in;height:3.36181in"
 alt="image" />
-
+</p> <p align="center">
 <img src="./media/image65.png" style="width:4.12083in;height:4.72431in"
 alt="image" />
 </p>
@@ -824,7 +825,7 @@ do what over it to understand what it is made of more details.
 <p align="center">
 <img src="./media/image73.png"
 style="width:5.13542in;height:1.64583in" />
-
+</p> <p align="center">
 <img src="./media/image74.png"
 style="width:5.64583in;height:2.05208in" />
 </p>
@@ -926,7 +927,7 @@ style="width:2.99173in;height:0.39153in" />
 <p align="center">
 <img src="./media/image88.png" style="width:2.96856in;height:2.99237in"
 alt="Graphical user interface Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image89.png" style="width:2.97613in;height:0.74789in"
 alt="Graphical user interface, text Description automatically generated" />
 </p>
@@ -1003,7 +1004,7 @@ design based on DRC regulations.
 <p align="center">
 <img src="./media/image97.png" style="width:7.0875in;height:3.52917in"
 alt="image" />
-
+</p> <p align="center">
 <img src="./media/image98.png" style="width:6.26806in;height:4.05556in"
 alt="Square Description automatically generated" />
 </p>
@@ -1044,7 +1045,7 @@ than 0.48um. We can calculate it by using the box property command.
 <img src="./media/image102.png" style="width:3.36134in;height:3.3768in"
 alt="A picture containing chart Description automatically generated" /><img src="./media/image103.png" style="width:3.64948in;height:2.77815in"
 alt="A picture containing rectangle Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image104.png" style="width:3.47853in;height:1.37584in"
 alt="Text Description automatically generated with medium confidence" /><img src="./media/image105.png" style="width:3.55601in;height:1.64246in"
 alt="Graphical user interface, text, application Description automatically generated" />
@@ -1062,7 +1063,7 @@ corresponding to poly.9 DRC rules. Both the rules are mentioned below -
 <p align="center">
 <img src="./media/image107.png" style="width:7.20851in;height:1.594in"
 alt="Text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image108.png" style="width:7.19585in;height:3.27669in"
 alt="Text Description automatically generated" />
 </p>
@@ -1074,7 +1075,7 @@ violations.
 <p align="center">
 <img src="./media/image109.png" style="width:7.25714in;height:1.84901in"
 alt="Text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image110.png"
 style="width:7.44152in;height:0.81406in" />
 </p>
@@ -1120,7 +1121,7 @@ nwell overlap is around 1.03um and non-overlap extension is around
 <p align="center">
 <img src="./media/image114.png" style="width:7.24348in;height:2.81521in"
 alt="Text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image115.png" style="width:7.05995in;height:3.49165in"
 alt="Graphical user interface Description automatically generated" />
 </p>
@@ -1142,7 +1143,7 @@ commands –
 <p align="center">
 <img src="./media/image117.png" style="width:7.22969in;height:3.14707in"
 alt="Graphical user interface, text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image118.png" style="width:7.20551in;height:3.66742in"
 alt="Graphical user interface, text Description automatically generated" />
 </p>
@@ -1165,7 +1166,7 @@ for the nwell even if doesn’t have any tap contact.
 <p align="center">
 <img src="./media/image120.png"
 style="width:7.09987in;height:5.01302in" />
-
+</p> <p align="center">
 <img src="./media/image121.png" style="width:7.16247in;height:2.28221in"
 alt="Text Description automatically generated" />
 </p>
@@ -1177,10 +1178,10 @@ when DRC (full) is ran on the design.
 <p align="center">
 <img src="./media/image122.png" style="width:7.18463in;height:2.08232in"
 alt="Graphical user interface, text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image123.png" style="width:7.19047in;height:1.66896in"
 alt="Text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image124.png" style="width:7.15257in;height:2.30917in"
 alt="Text Description automatically generated" />
 </p>
@@ -1199,10 +1200,10 @@ contact are getting flagged as DRC errors.
 <p align="center">
 <img src="./media/image126.png"
 style="width:7.04001in;height:4.43257in" />
-
+</p> <p align="center">
 <img src="./media/image127.png" style="width:7.05106in;height:4.05596in"
 alt="Graphical user interface, text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image128.png" style="width:7.0137in;height:4.05234in"
 alt="Graphical user interface, text, application Description automatically generated" />
 </p>
@@ -1295,7 +1296,7 @@ following directory –
 <p align="center">
 <img src="./media/image135.png" style="width:7.0875in;height:1.27778in"
 alt="Text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image136.png" style="width:1.88504in;height:2.16363in"
 alt="A picture containing text Description automatically generated" />
 </p>
@@ -1355,7 +1356,7 @@ alt="Text Description automatically generated" />
 
 7.  Step – 7. Open the new Layout file and in the terminal write `'***lef
     write***'` this will output a LEF file from the layout file.  
-  <p align="center">    
+<p align="center">    
     <img src="./media/image142.png" style="width:4.03226in;height:1.33609in"
     alt="Text Description automatically generated" />
 </p>
@@ -1384,7 +1385,7 @@ following custom cell ***‘sky130_vsdinv’***.
 <p align="center">
 <img src="./media/image144.png"
 style="width:7.0875in;height:1.05903in" />
-
+</p> <p align="center">
 <img src="./media/image145.png" style="width:3.33596in;height:4.28804in"
 alt="Text Description automatically generated" />
 </p>
@@ -1665,7 +1666,7 @@ each and every variable accordingly –
 <p align="center">
 <img src="./media/image173.png"
 style="width:6.26806in;height:0.91597in" />
-
+</p> <p align="center">
 <img src="./media/image174.png" style="width:6.26806in;height:1.16806in"
 alt="Text Description automatically generated" />
 </p>
@@ -1706,7 +1707,7 @@ was `-3.1580`.
 <p align="center">
 <img src="./media/image177.png" style="width:6.26806in;height:1.85139in"
 alt="Text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image178.png" style="width:6.26806in;height:3.50833in"
 alt="Text Description automatically generated" />
 </p>
@@ -1723,7 +1724,7 @@ After library change we observed that the min slack value changed to
 <p align="center">
 <img src="./media/image180.png" style="width:7.0458in;height:1.82351in"
 alt="Text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image181.png" style="width:7.00643in;height:2.99166in"
 alt="Text Description automatically generated" />
 </p>
@@ -1734,7 +1735,7 @@ use the following commands -
 <p align="center">
 <img src="./media/image182.png"
 style="width:7.10811in;height:1.80498in" />
-
+</p> <p align="center">
 <img src="./media/image183.png" style="width:7.09143in;height:1.19186in"
 alt="Text Description automatically generated" />
 </p>
@@ -1744,7 +1745,7 @@ the reported slacks.
 <p align="center">
 <img src="./media/image184.png" style="width:7.17134in;height:4.17997in"
 alt="Text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image185.png" style="width:7.18354in;height:1.33706in"
 alt="Text Description automatically generated" />
 </p>
@@ -1754,7 +1755,7 @@ iterations and generate a final Post-CTS def for further procedures.
 <p align="center">
 <img src="./media/image186.png" style="width:7.17348in;height:2.94776in"
 alt="Text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image187.png" style="width:7.14504in;height:1.92598in"
 alt="A screen shot of a computer Description automatically generated with low confidence" />
 </p>
@@ -1840,10 +1841,10 @@ rules that are applicable to this type of routing are –
 <p align="center">
 <img src="./media/image190.png"
 style="width:6.20093in;height:3.20254in" />
-
+</p> <p align="center">
 <img src="./media/image191.png"
 style="width:3.19633in;height:2.704in" />
-    
+</p> <p align="center">
 <img src="./media/image192.png" style="width:3.1532in;height:2.76097in"
 alt="A screenshot of a video game Description automatically generated" />
 </p>
@@ -1883,7 +1884,7 @@ this design are shown below –
 <p align="center">
 <img src="./media/image195.png"
 style="width:7.0875in;height:0.71389in" />
-
+</p> <p align="center">
 <img src="./media/image196.png"
 style="width:7.0875in;height:0.52014in" />
 </p>
@@ -1939,7 +1940,7 @@ style="width:6.31914in;height:3.89575in" />
 <p align="center">
 <img src="./media/image200.png" style="width:6.34772in;height:3.13219in"
 alt="Text Description automatically generated" />
-
+</p> <p align="center">
 <img src="./media/image201.png" style="width:1.60838in;height:2.43885in"
 alt="Chart Description automatically generated with medium confidence" /><img src="./media/image202.png"
 style="width:1.70833in;height:2.51042in" />
