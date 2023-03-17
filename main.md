@@ -800,8 +800,7 @@ pick. So, picking right value of threshold is necessary (Not always
 Another reason for negative delay is, if you have huge wire delays, so
 output waveform curve will be very odd. It can lead to negative slew.
 
-# **Day – 3 Design Library Cell using Magic Layout and ngspice
-Characterization**
+# **Day – 3 Design Library Cell using Magic Layout and ngspice Characterization**
 
 ## **Lab – IOPlacer Experiment for Equi-distant Bumps**
 
@@ -882,8 +881,7 @@ alt="A picture containing treemap chart Description automatically generated" />
 - Mask 12-16 : Deposit SiO2 and do CMP and use masks 12 to 16 created
   drilling contacts to local interconnects to form higher level routing.
 
-## **Lab – Introduction to Sky130 basic layers layout and LEF using
-Inverter**
+## **Lab – Introduction to Sky130 basic layers layout and LEF using Inverter**
 
 We can view different layers in the magic layout and by over hover a
 particular element and pressing ***‘s’*** selects the object and we can
@@ -1359,8 +1357,7 @@ We have successfully demonstrated and created a custom DRC rule which
 runs only when full style DRC is run and is functioning as per
 expectations.
 
-# **Day – 4 Pre-Layout Timing Analysis and Importance of a Good Clock
-Tree**
+# **Day – 4 Pre-Layout Timing Analysis and Importance of a Good Clock Tree**
 
 ## **Theory – Introduction to Delay Tables**
 
@@ -1453,23 +1450,28 @@ We need to find the exact dimensions of the grid where the tracks will
 be running to check whether this cell can be placed and routed
 effectively or not. The track information can be found under the
 following directory –
+
 <p align="center">
 <img src="./media/image135.png" style="width:7.0875in;height:1.27778in"
 alt="Text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image136.png" style="width:1.88504in;height:2.16363in"
 alt="A picture containing text Description automatically generated" />
 </p>
+
 This suggests that li1 layer has Horizontal Tracks of Pitch 0.46 with
 the origin from 0.23. Similarly, we can understand for the vertical li1
 layer Pitch is 0.34 and Origin is at 0.17. We will try to replicate this
 grid on Magic so that we can verify the above mentioned two conditions.
 To do so we will have to use `***grid***` command in magic shell shown
 below –
+
 <p align="center">
 <img src="./media/image137.png" style="width:7.0875in;height:6.03819in"
 alt="Graphical user interface, application, Excel Description automatically generated" />
 </p>
+
 The above-mentioned Figure clearly depicts that Rule Number 1 mentioned
 above stating that both input and output pin must lie over a crossing
 Horizontal and Vertical tracks is honoured.
@@ -1487,54 +1489,67 @@ please follow the Step-by-Step procedure mentioned below –
 
 2.  Step – 2. Now after selection go to ***Edit \>\> Text***, this will
     pop-up a dialogue box.
+
 <p align="center">
 <img src="./media/image138.png" style="width:6.26806in;height:3.61389in"
 alt="Chart Description automatically generated" />
 </p>
+
 3.  Step – 3. Fill the Name of the Pin, Size of the Text Label, Change
     the Attach to Layer (locali in our case) option Sticky and Provide a
     Port number corresponding to each pin which should be unique.
 
 4.  Step – 4. Perform this same thing for rest of the ports as well, Z ,
     VPWR and VGND.
+
 <p align="center">
 <img src="./media/image139.png" style="width:2.51172in;height:3.30315in"
-alt="Graphical user interface, application Description automatically generated" /><img src="./media/image140.png" style="width:2.34755in;height:3.28557in"
+alt="Graphical user interface, application Description automatically generated" />
+</p>
+
+<p align="center">
+<img src="./media/image140.png" style="width:2.34755in;height:3.28557in"
 alt="Diagram Description automatically generated with medium confidence" />
 </p>
+
 5.  Step – 5. Now we need to provide characteristics for each and every
     type of pin, every port can have a class Input, Output or InOut,
     whereas different use cases can be defined for each pin. Please
     follow the steps mentioned in the figure below for assigning
     characteristics to every pin in the layout.
+
 <p align="center">
 <img src="./media/image141.png" style="width:5.55024in;height:4.66353in"
 alt="Text Description automatically generated" />
 </p>
+
 6.  Step – 6. Now we will save the following file as sky130_vsdinv.mag
     to mark it as customized inv.
 
 7.  Step – 7. Open the new Layout file and in the terminal write `'***lef
     write***'` this will output a LEF file from the layout file.  
+
 <p align="center">    
     <img src="./media/image142.png" style="width:4.03226in;height:1.33609in"
     alt="Text Description automatically generated" />
 </p>
+
 Just for reference, we will open the LEF generated to understand the
 steps of Port creation done in the previous stage. An example LEF
 generated after the above operations is shown in the figure below –
+
 <p align="center">
 <img src="./media/image143.png" style="width:4.73636in;height:4.18525in"
 alt="Text Description automatically generated" />
 </p>
+
 We can see that the LEF retains the characteristics defined by us in the
 Magic and also retains the geometry of selection where the text was
 defined and now all the ports defined are changed to corresponding Pins.
 The port number defined in the previous stage controls the definition
 order of the Pins in the custom LEF.
 
-## **Lab – Data Preparation for Including Custom LEF inverter in openlane
-Flow**
+## **Lab – Data Preparation for Including Custom LEF inverter in openlane Flow**
 
 To include the LEF file into the current openlane flow copy the newly
 generated custom LEF into the src folder for out particular design.
@@ -1542,13 +1557,16 @@ Apart from that we also need to copy the required liberties for the same
 cell so that the tool will understand the functionality of these lefs.
 Please note that the libs should contain the information for the
 following custom cell ***‘sky130_vsdinv’***.
+
 <p align="center">
 <img src="./media/image144.png"
 style="width:7.0875in;height:1.05903in" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image145.png" style="width:3.33596in;height:4.28804in"
 alt="Text Description automatically generated" />
 </p>
+
 There are 3 different libraries present which need to be copied, please
 note that all of them are characterized for a different process corner.
 
@@ -1558,17 +1576,21 @@ Beforee we run the docker command and start a new synthesis with custom
 INV cell we need to set the configuration parameters so that the tool
 understands and pick these files during synthesis. For that please go
 the design section and open config.tcl.
+
 <p align="center">
 <img src="./media/image146.png"
 style="width:7.0875in;height:1.20694in" />
 </p>
+
 Under config.tcl add the new liberties and the lef’s path so that they
 can be used/selected during the synthesis and become a part of the
 openlane flow.
+
 <p align="center">
 <img src="./media/image147.png" style="width:7.0875in;height:2.87014in"
 alt="Text Description automatically generated" />
 </p>
+
 Now we will run the docker command again and launch a Openlane shell.
 But we need to override the current work done with the pre-existing inv
 cell. For launching overwriting in a pre-generated run please use the
@@ -1578,35 +1600,43 @@ following command –
 
 After running this, we need to set the lef’s again so that openlane
 takes our Lef files –
+
 <p align="center">
 <img src="./media/image148.png"
 style="width:6.26806in;height:0.775in" />
 </p>
+
 Next step is to finally run the synthesis again using
 `***‘run_synthesis’***` command. While the run is progressing it will
 generate a table which will list out the total number of used cell for
 each type of cell. Verify the number of cells used for the custom
 inverter ***“sky130_vsdinv”***.
+
 <p align="center">
 <img src="./media/image149.png" style="width:4.25717in;height:2.11868in"
 alt="Text Description automatically generated with low confidence" />
 </p>
+
 We have successfully incorporated the custom INV cell into our picrv32a
 design. But we can still see that there is a big violation in terms of
 min and max slew.
+
 <p align="center">
 <img src="./media/image150.png" style="width:4.07453in;height:0.92271in"
 alt="Text Description automatically generated" />
 </p>
+
 Afterwards, we will run the run_floorplan and run_placement command to
 generate a post-placed lef and def, which can be viewed in Magic. We can
 verify that the cells we generated are being used or not in the def by
 finding the sky130_vsdinv cell in magic. Currently there is no way of
 searching the cell so we will have to do it manually.
+
 <p align="center">
 <img src="./media/image151.png" style="width:5.28333in;height:3.632in"
 alt="Timeline Description automatically generated" />
 </p>
+
 ## **Lab – Resolving Huge Timing Violations Observed**
 
 In our previous lab we observed very high timing violation but a good
@@ -1616,24 +1646,30 @@ settings in order to make our synthesis run based on updated
 configurations. In order to make our setting more timing aware we will
 have to make our peace with some area penalty and for telling that to
 openlane we will use the following settings -
+
 <p align="center">
 <img src="./media/image152.png" style="width:3.57591in;height:2.08118in"
 alt="Text Description automatically generated" />
 </p>
+
 Before running the synthesis do make sure we delete the previous RTL
 file generated by run_synthesis. And then run the command
 `***‘run_synthesis’***`
+
 <p align="center">
 <img src="./media/image153.png" style="width:4.51099in;height:1.52132in"
 alt="Text Description automatically generated" />
 </p>
+
 This basically shows that our slack has drastically reduced and is only
 slightly negative now. But it comes with a Area Penalty, and also this
 time usage for our custom Inv has increased automatically.
+
 <p align="center">
 <img src="./media/image154.png" style="width:4.43358in;height:1.56742in"
 alt="Text Description automatically generated" />
 </p>
+
 `%age Area Increase = (209181.872 – 147950.6464) / 147950.6466 \* 100 =
 **41.3%**`
 
@@ -1644,19 +1680,23 @@ Now we will again `***‘run_floorplan’***` and `***‘run_routing’.***` We 
 confirm from the DEF that the custom cell should be present in the
 updated def from the floorplan. In our case the cell is present and it
 is being used by yosys during synthesis effectively.
+
 <p align="center">
 <img src="./media/image155.png" style="width:3.74135in;height:1.80684in"
 alt="Text Description automatically generated" /><img src="./media/image156.png" style="width:2.44673in;height:1.79893in"
 alt="Text Description automatically generated" />
 </p>
+
 We can also view the same in Magic and confirm it from there as well.
 After selecting the cell in magic, if we use command ***‘expand’,***
 Magic will show the LEF view for the cell showing the connectivity to
 the VDD & VSS Rails.
+
 <p align="center">
 <img src="./media/image157.png" style="width:6.472in;height:3.80492in"
 alt="Graphical user interface, application Description automatically generated" />
 </p>
+
 ## **Theory – Understanding Static Timing Analysis**
 
 Hold Time: Hold time is defined as the minimum amount of time after the
@@ -1675,17 +1715,21 @@ clock Jitter, clock delays, buffer uncertainties etc. So due to which
 the actual start point of the clock can either shift in forward or
 backward direction known as clock jitter. Clock Jitter is accurately
 represented by the below figure.
+
 <p align="center">
 <img src="./media/image158.png" style="width:7.0875in;height:1.49861in"
 alt="Graphical user interface Description automatically generated" />
 </p>
+
 Now the formulation of combination delay changes to `***Time Period –
 Setup Time – Setup Uncertainty***` in which setup uncertainty is driven
 from the clock jitter.
+
 <p align="center">
 <img src="./media/image159.png" style="width:7.0875in;height:3.37431in"
 alt="Graphical user interface Description automatically generated" />
 </p>
+
 ## **Lab – Setting up STA Analysis for Picorv32a design \[OpenSTA\]**
 
 After performing the routing we saw that out design still is prone to
@@ -1697,10 +1741,12 @@ on our latest design generated till now.
 For that we will create a file called pre_sta.conf and we need to define
 different parameters in it so we know what are we reading and on what
 the tool functions.
+
 <p align="center">
 <img src="./media/image160.png" style="width:7.21397in;height:1.85824in"
 alt="Text Description automatically generated" />
 </p>
+
 Please note that we also need to define a new input here which is the
 Synopsys Design Constraints File (SDC) which is required for
 understanding the clocks that will be traced through the design. It
@@ -1713,37 +1759,45 @@ same.
 
 `***‘Create_clock’***` is the main command which will generate the clock
 at a certain position in the design.
+
 <p align="center">
 <img src="./media/image161.png"
 style="width:6.99633in;height:3.80589in" />
 </p>
+
 ## **Lab – Setting up STA Analysis for Picorv32a design \[OpenSTA\]**
 
 Next step will be to run STA on the design in order to do so, go to your
 linux shell an type the following command –
 
 `sta pre_sta.conf`
+
 <p align="center">
 <img src="./media/image162.png" style="width:6.91896in;height:1.51089in"
 alt="Text Description automatically generated" />
 </p>
+
 Now after this is run, it will report the slack values, if the slack
 values are still negative we might have to do some tweaking. In our case
 min and max slew were both reported to be 0 therefore no further
 tweaking of setup is required to resolve it.
+
 <p align="center">
 <img src="./media/image163.png" style="width:6.26806in;height:4.59444in"
 alt="A picture containing text Description automatically generated" />
 </p>
+
 ## **Theory – Clock Tree Synthesis**
 
 Clock tree synthesis mean to create such a network for the clock so that
 the slew should be as close to 0 as possible throughout the design. The
 routing needs to be done in such a manner that slew can be minimized.
+
 <p align="center">
 <img src="./media/image164.png" style="width:7.0875in;height:3.47986in"
 alt="Graphical user interface Description automatically generated" />
 </p>
+
 If we randomly do clock tracing by connecting clock paths anywhere the
 wirelength for the clock will change which will increase the capacitance
 and the there will be slew violations. We need to make the clock paths
@@ -1752,10 +1806,12 @@ uniform in all direction. In order to achieve so there is a strategy
 called as Mid – Point Strategy or H shaped clock in which a mid-point is
 chosen for a number of flops connecting and that midpoint delivers the
 clock path uniformly in each direction as shown in figure below.
+
 <p align="center">
 <img src="./media/image165.png"
 style="width:7.0875in;height:3.49861in" />
 </p>
+
 Second step after planning the path is clock buffer insertion, this is a
 very important aspect because the clock nets are getting connected to
 thousand of registers at once and this could lead to very high cap
@@ -1763,10 +1819,12 @@ values, due to input pin caps and long wire-length. So, to improvise the
 situation clock buffers are inserted at different places in a uniform
 manner so that the clock slew remain unaffected and all signal integrity
 issues are resolved.
+
 <p align="center">
 <img src="./media/image166.png"
 style="width:7.0875in;height:3.46181in" />
 </p>
+
 ## **Theory – Clock Net Shielding and Crosstalk’s**
 
 When multiple different nets are running parallel to each they can have
@@ -1775,10 +1833,12 @@ triggered. This phenomenon is called as crosstalk.
 
 Crosstalks can be of two types Near End Crosstalks and Far End
 Crosstalks, which are depiced using the diagram below –
+
 <p align="center">
 <img src="./media/image167.png" style="width:5.07361in;height:3.424in"
 alt="Generation of NEXT and FEXT | Download Scientific Diagram" />
 </p>
+
 Now due to these crosstalk a phenonmenon known as glitch can happen,
 which basically is just unintentional switching of a line due to
 crosstalk, due to coupling capacitance when there is a sudden transition
@@ -1786,10 +1846,12 @@ in one of the wires, it cause it’s neighbouring wires to get affected
 and cause a small change in their waveform which if is greater than the
 voltage threshold can cause glitch and false triggering which can be
 veru harmful to the design.
+
 <p align="center">
 <img src="./media/image168.png"
 style="width:5.69509in;height:2.75101in" />
 </p>
+
 In order to avoid these Crosstalk’s and glitches in the design we have
 to apply a strategy known as clock shielding. Main idea behind this
 shielding is to keep a parallel VSS/VDD ground running near between the
@@ -1802,23 +1864,31 @@ almost nil and wont harm the circuitry as well as logic.
 There are only few settings which are provided to Openlane for
 performing the CTS. We can use the default values as it is to run Clock
 Tree Synthesis.
+
 <p align="center">
 <img src="./media/image169.png"
 style="width:7.0875in;height:1.25208in" />
 </p>
+
 To run CTS now we need to use the following command in the openlane
 shell–
 
 `run_cts`
+
 <p align="center">
 <img src="./media/image170.png"
 style="width:7.18612in;height:1.75712in" />
 </p>
+
 The basic setting from which the CTS picks the proc values are
 openroad/or_cts.tcl under scripts or from the
+
 <p align="center">
 <img src="./media/image171.png" style="width:3.43864in;height:2.66413in"
-alt="Text Description automatically generated" /><img src="./media/image172.png" style="width:3.24761in;height:2.66256in"
+alt="Text Description automatically generated" />
+</p>
+<p align="center">
+<img src="./media/image172.png" style="width:3.24761in;height:2.66256in"
 alt="Text Description automatically generated" />
 </p>
 We can verify the same values from the openlane shell as well by echoing
@@ -1826,7 +1896,8 @@ each and every variable accordingly –
 <p align="center">
 <img src="./media/image173.png"
 style="width:6.26806in;height:0.91597in" />
-</p> <p align="center">
+</p> 
+<p align="center">
 <img src="./media/image174.png" style="width:6.26806in;height:1.16806in"
 alt="Text Description automatically generated" />
 </p>
@@ -1846,6 +1917,7 @@ following command in the shell to launch it –
 
 It will perform the basic checks and load the design and set the LEF and
 DEF for us to perform further actions.
+
 <p align="center">
 <img src="./media/image175.png"
 style="width:6.65992in;height:2.22022in" />
@@ -1857,74 +1929,93 @@ until we have resolved the STA issues.
 To create a db and set different variables, please use the commands
 shown below, we need to generate the reports in order to get values of
 min and max slack.
+
 <p align="center">
 <img src="./media/image176.png" style="width:7.17891in;height:2.82989in"
 alt="Text Description automatically generated" />
 </p>
+
 After checking the reports again, we observed min and max slack
 violations. Min slack now observed was `-2.153` and Max Slack now observed
 was `-3.1580`.
+
 <p align="center">
 <img src="./media/image177.png" style="width:6.26806in;height:1.85139in"
 alt="Text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image178.png" style="width:6.26806in;height:3.50833in"
 alt="Text Description automatically generated" />
 </p>
+
 Now we will alter the library and use the typical library to
 characterize the cell and recalculate the slack values based on that.
 For that we just need to reload the db and change the parameters
 accordingly which were not saved in the db.
+
 <p align="center">
 <img src="./media/image179.png"
 style="width:6.96636in;height:2.4613in" />
 </p>
+
 After library change we observed that the min slack value changed to
 `-0.0672` and Max slack value changed to `5.1873.`
+
 <p align="center">
 <img src="./media/image180.png" style="width:7.0458in;height:1.82351in"
 alt="Text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image181.png" style="width:7.00643in;height:2.99166in"
 alt="Text Description automatically generated" />
 </p>
+
 Now since one of the slacks has improved, we will do some other changes
 like replacing the buffer_1 with other buffers and re-calculating the
 slack. In order to remove the buffer from the used buffer list please
 use the following commands -
+
 <p align="center">
 <img src="./media/image182.png"
 style="width:7.10811in;height:1.80498in" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image183.png" style="width:7.09143in;height:1.19186in"
 alt="Text Description automatically generated" />
 </p>
+
 Now we have verified that the DEF used is correct and the buffer cell
 list is also correct so we will run the openroad again and recalculate
 the reported slacks.
+
 <p align="center">
 <img src="./media/image184.png" style="width:7.17134in;height:4.17997in"
 alt="Text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image185.png" style="width:7.18354in;height:1.33706in"
 alt="Text Description automatically generated" />
 </p>
+
 After this the new final min updated slack is `0.2397` and maximum slack
 is `5.4044.` Since both the slacks are positive now we can stop these
 iterations and generate a final Post-CTS def for further procedures.
 <p align="center">
 <img src="./media/image186.png" style="width:7.17348in;height:2.94776in"
 alt="Text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image187.png" style="width:7.14504in;height:1.92598in"
 alt="A screen shot of a computer Description automatically generated with low confidence" />
 </p>
+
 Finally we will check the reported skew values as well, which are
 mentioned in the below figure –
 <p align="center">
 <img src="./media/image188.png" style="width:4.3375in;height:2.52532in"
 alt="A picture containing text Description automatically generated" />
 </p>
+
 # **Day – 5 Final Steps for RTL2GDS using TritonRoute and openSTA**
 
 ## **Theory – Understanding Routing Algorithms**
@@ -1969,10 +2060,12 @@ Steps for performing Maze Routing –
 
 8.  Step 8. Chooses the smallest paths with least number of twists and
     turns.
+
 <p align="center">
 > <img src="./media/image189.png"
 > style="width:6.07707in;height:4.84212in" />
 </p>
+
 > Limitation of Maze Algorithm –
 
 1.  The method performs this kind of step for every instance pin
@@ -1998,16 +2091,20 @@ rules that are applicable to this type of routing are –
 2.  Optimal Wire Pitch between two adjacent parallel wires.
 
 3.  Minimum Wire Spacing
+
 <p align="center">
 <img src="./media/image190.png"
 style="width:6.20093in;height:3.20254in" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image191.png"
 style="width:3.19633in;height:2.704in" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image192.png" style="width:3.1532in;height:2.76097in"
 alt="A screenshot of a video game Description automatically generated" />
 </p>
+
 ## **Lab – Creating Power Distribution Network on Post-CTS design**
 
 To run routing over the design, we need to reload our post-cts database.
@@ -2023,10 +2120,12 @@ command –
 After loading the run-area, to check the correctness, we need to confirm
 whether the selected def is correct or not. For performing routing, we
 need to use a post-cts def.
+
 <p align="center">
 <img src="./media/image193.png"
 style="width:6.26806in;height:0.51597in" />
 </p>
+
 ### **Created PDN Details and Statistics**
 
 Next steps would be to generate the PDN rails before performing signal
@@ -2034,29 +2133,36 @@ routing. But in our case the PDN was already pre-generated during the
 floorplan itself. We can review the pitch and width of the rails
 generated for PDN from the log and all the standard cells must adhere to
 integral multiples of the pitch defined in the log.
+
 <p align="center">
 <img src="./media/image194.png" style="width:7.0875in;height:4.02569in"
 alt="Text Description automatically generated" />
 </p>
+
 We can check the statistics for pdn creation under the log generated
 under results/7-pdn.log. Number of nodes for Vpwr and Vgnd created for
 this design are shown below –
+
 <p align="center">
 <img src="./media/image195.png"
 style="width:7.0875in;height:0.71389in" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image196.png"
 style="width:7.0875in;height:0.52014in" />
 </p>
+
 Example of PDN is shown in the figure below, power basically enter the
 die through IO Pads and then reaches the ring/rails ultimately from
 their connecting to each standard cell. So from the IO pads present in
 Met4 and Met5 eventually from there the metal lines are dropped down to
 metal1 and finally gets connected to the Rails.
+
 <p align="center">
 <img src="./media/image197.png"
 style="width:6.26806in;height:4.15208in" />
 </p>
+
 ## **Theory – Understanding TritonRoute**
 
 In actual industry the routing process is very complicated as the
@@ -2073,10 +2179,12 @@ process.
 2.  Detail Route – This is a more detailed routing while goes till cell
     level and has higher optimizations to get the best routing possible.
     In our case this is performed by TritonRoute.
+
 <p align="center">
 <img src="./media/image198.png" style="width:7.0875in;height:2.96319in"
 alt="Diagram Description automatically generated" />
 </p>
+
 TritonRoute (Detailed Routing) takes in inputs like LEF/DEF and
 preprocessed route and outputs a wirelength and Via optimized routed
 def. It basically works on different constraints either provided by the
@@ -2090,21 +2198,29 @@ discussed below –
     will post process it finally so that each metal layers is consistent
     i.e. M1 is in vertical direction and M2 is in Horizontal direction
     which should be orthogonal to each other.
+
 <p align="center">
 <img src="./media/image199.png"
 style="width:6.31914in;height:3.89575in" />
 </p>
+
 2.  Honours the pre-processed routed guides from Fastroute.
 
 3.  Assumes route guides for each net satisfy inter-guide connectivity.
+
 <p align="center">
 <img src="./media/image200.png" style="width:6.34772in;height:3.13219in"
 alt="Text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image201.png" style="width:1.60838in;height:2.43885in"
-alt="Chart Description automatically generated with medium confidence" /><img src="./media/image202.png"
+alt="Chart Description automatically generated with medium confidence" />
+</p>
+<p align="center">
+<img src="./media/image202.png"
 style="width:1.70833in;height:2.51042in" />
 </p>
+
 4.  Works on MILP based panel routing scheme with Intra-Layer parallel
     and inter-layer sequential routing framework.
 
@@ -2112,10 +2228,12 @@ It basically means that routing is done sequential like M1 then M2 then
 M3 so on but when M1 is happening it will happen in parallel for
 different even and odd tiles. But once M1 finished then only M2 will
 start till and thereby following the chain like this.
+
 <p align="center">
 <img src="./media/image203.png" style="width:6.28087in;height:3.63769in"
 alt="Graphical user interface, text Description automatically generated" />
 </p>
+
 ## **Theory – Routing Algorithm of TritonRoute  
 
 The algorithm used for TritonRoute is fairly simple and it basically
@@ -2125,10 +2243,12 @@ it basically runs a Minimum Spanning Tree in order to reduce the cost
 which basically reduces the total wire length. But note that few other
 complications like tweaking and turning are also handled during this
 process.
+
 <p align="center">
 <img src="./media/image204.png" style="width:6.62547in;height:3.89894in"
 alt="Text Description automatically generated" />
 </p>
+
 ## **Lab – Routing the Design using TritonRoute**
 
 Next steps after connecting the Power and Ground Rails and generating
@@ -2138,29 +2258,35 @@ should be post PDN def. In order to run TritonRoute for routing the
 design perform the following command –
 
 `*Run_routing*`
+
 <p align="center">
 <img src="./media/image205.png"
 style="width:6.26806in;height:0.50417in" />
 </p>
+
 This run_routing is controlled by using the following configuration
 parameters. These parameters can control the routing layers, number of
 iterations, routing engine etc. for performing detailed routing. As
 explained in tutorial there are about 4 different TritonRoute engines.
 Here we have used ROUTING_STRATEGY 0 for demonstration purposes.
+
 <p align="center">
 <img src="./media/image206.png" style="width:7.0875in;height:3.1in"
 alt="Text Description automatically generated" />
 </p>
+
 ### **Logs and Reports from Triton Route**
 
 After running run_routing tool will perform a lot of iterations for
 optimizing the routing through which it will obtain the best solution
 for routing. Please note that tighter the optimization constraints
 higher will be the run-time.
+
 <p align="center">
 <img src="./media/image207.png" style="width:6.26806in;height:2.15in"
 alt="Text Description automatically generated" />
 </p>
+
 In our case we see 0 violations, if there are some violations then in
 that case a DRC file will be generated. That DRC needs to be validated
 and the errors needs to be fixed manually.
