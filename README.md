@@ -8,7 +8,7 @@
   - [Theory – Fundamentals of SoC](https://github.com/nsehgal1301/VSDIAT_Training/edit/main/README.md#theory--fundamentals-of-soc)
   - [Theory - Understanding RISC-V Architecture](https://github.com/nsehgal1301/VSDIAT_Training/edit/main/README.md#theory--understanding-risc-v-architecture)
   - [Theory - Understanding ASIC Design Flow](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/README.md#theory--understanding-asic-design-flow) 
-    - [Process Design Kits](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/README.md#process-design-kits)
+    - [Process Design Kits](https://github.com/nsehgal1301/VSDIAT_Training/edit/main/README.md#process-design-kits)
     - [Skywater 130nm Open PDK Example](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/README.md#skywater-130nm-open-pdk-example)
     - [RTL2GDS ASIC Design Flow](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/README.md#rtl2gds-asic-design-flow) 
 
