@@ -262,24 +262,27 @@ Openlane has a feature called Design Set Exploration by which it can
 find the best set of parameters and constraints that can be used in the
 flow. It basically sweeps through different configurations and suggest
 the best solution to be used as constraints for the flow.
+
 <p align="center">
 <img src="./media/image18.png"
 style="width:7.0875in;height:3.79167in" />
 </p>
 <p align="center"> Fig 14. OpenLane Design Exploration Step </p>
 
-
 Figure below mentions the Flowchart of OpenLane ASIC Flow. This OpenLane
 Flow consists of many different types of open-source tools like yosys,
 openSTA, TritonRoute, Magic, Qflow, Fault etc. The flowchart below
 effectively summarizes how each tool is being used and what is the
 general flow deployed while using OpenLane.
+
 <p align="center">
 <img src="./media/image19.png" style="width:7.0875in;height:4.26319in"
 alt="Diagram Description automatically generated" />
-</p> <p align="center"> 
+</p>
+<p align="center"> 
 <img src="./media/image20.png" style="width:7.0875in;height:5.0375in" />
 </p>
+
 ### **OpenROAD App -**
 
 OpenRoad app is automatic placement and routing tool and it performs the
