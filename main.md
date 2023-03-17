@@ -648,26 +648,33 @@ In order to perform placement use the following command in openlane –
 
 Various Logs and Reports generated from run_placement are described
 below –
+
 <p align="center">
 <img src="./media/image58.png"
 style="width:7.16995in;height:0.92067in" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image59.png"
 style="width:7.20032in;height:0.88628in" />
 </p>
+
 After placement another DEF is generated which contains the previous
 floorplan DEF and adds the standard cells positions to it accordingly.
+
 <p align="center">
 <img src="./media/image60.png" style="width:6.94943in;height:6.85319in"
 alt="A picture containing text, electronics, circuit Description automatically generated" />
 </p>
+
 Various results that can be frawn out of the logs/ reports from
 Placement are like it mentioned a first cut slack information although
 its not correct but it can give a very coarse value for the same.
+
 <p align="center">
 <img src="./media/image61.png" style="width:7.04377in;height:3.66391in"
 alt="A picture containing text Description automatically generated" />
 </p>
+
 ## **Theory – Circuit design step and 2.3.3 Layout design step**
 
 Design steps
@@ -687,24 +694,31 @@ Layout design
   these values in layout.
 
 - Derive pmos and nmos network graph.
+
 <p align="center">
 <img src="./media/image62.png" style="width:6.25833in;height:5.96528in"
 alt="image" />
 </p>
+
 Get the euler's path for the graph
+
 <p align="center">
 <img src="./media/image63.png" style="width:7.0875in;height:4.08264in"
 alt="image" />
 </p>
+
 After getting the euler's path create stick diagram. Convert the stick
 diagram to layout while we adhere to the rules given by foundary.
+
 <p align="center">
 <img src="./media/image64.png" style="width:7.0875in;height:3.36181in"
 alt="image" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image65.png" style="width:4.12083in;height:4.72431in"
 alt="image" />
 </p>
+
 Output of this step are:
 
 1.  GDSII --\> Layout file
@@ -738,10 +752,12 @@ functions. Steps for the same are explained below -
 
 We will define some variables which are used. These are based on input
 and output waveform. Let's take inverter waveform.
+
 <p align="center">
 <img src="./media/image66.png" style="width:5.72431in;height:6.18958in"
 alt="image" />
 </p>
+
 - slew_low_rise_thr --\> 20% from 0 for rising
 
 - slew_high_rise_thr --\> 20% from 1 that is 80% from 0 for rising
@@ -753,19 +769,23 @@ alt="image" />
 All 4 are used to calculate slew. Rise variables use to calculate rise
 slew and fall for fall slew.Now let's assume another waveform of buffer,
 red is input and blue is output
+
 <p align="center">
 <img src="./media/image67.png" style="width:5.68958in;height:6.06875in"
 alt="image" />
 </p>
+
 - in_rise_thr --\> generally 50%.
 
 - out_rise_thr --\> generally 50%
 
 Now consider fall waverofrm
+
 <p align="center">
 <img src="./media/image68.png" style="width:5.87917in;height:6.13819in"
 alt="image" />
 </p>
+
 - in_fall_thr --\> generally 50%
 
 - out_fall_thr --\> generally 50%
@@ -794,33 +814,41 @@ Currently, this variable set to 1. Change it to 2.
 We can see in the below image that when we change the variable to 2 all
 the pins adjusted in lower left corner only instead of around whole
 design.
+
 <p align="center">
 <img src="./media/image69.png" style="width:7.0875in;height:3.13542in"
 alt="image" />
 </p>
+
 ## **Lab – Steps to Gitclone vsdstdcelldesign**
 
 Before proceeding ahead we need to clone the whole directory containing
 the std cell design into our local directory and for that we will use
 git clone method.
+
 <p align="center">
 <img src="./media/image70.png" style="width:7.20568in;height:0.90051in"
 alt="Text Description automatically generated" />
 </p>
+
 Afterwards, we will run Magic and try to visualize the std cell layout.
 The command used for the same is-
 
 `magic -T \<Tech File Path\> \<Path to Layout File\>`
+
 <p align="center">
 <img src="./media/image71.png"
 style="width:7.67236in;height:0.18701in" />
 </p>
+
 This will open the Magic Viewer and we can see the inverter layout
 corresponding to different layers.
+
 <p align="center">
 <img src="./media/image72.png" style="width:4.34742in;height:4.51118in"
 alt="A picture containing treemap chart Description automatically generated" />
 </p>
+
 ## **Theory – CMOS Fabrication Process**
 
 - Mask 1 : Used for creation of Isolation between wells to protect
@@ -860,13 +888,16 @@ Inverter**
 We can view different layers in the magic layout and by over hover a
 particular element and pressing ***‘s’*** selects the object and we can
 do what over it to understand what it is made of more details.
+
 <p align="center">
 <img src="./media/image73.png"
 style="width:5.13542in;height:1.64583in" />
-</p> <p align="center">
+</p> 
+<p align="center">
 <img src="./media/image74.png"
 style="width:5.64583in;height:2.05208in" />
 </p>
+
 To extract the spef from the current layout we need to use the command
 mentioned below –
 
@@ -875,52 +906,66 @@ mentioned below –
 - ext2spice cthresh 0 rthresh 0 : to extract all parasitic R and C
 
 - ext2spice : generates spice netlist \[.spice\]`
+
 <p align="center">
 <img src="./media/image75.png"
 style="width:4.76042in;height:0.48958in" />
-
+</p>
+<p align="center"> 
 <img src="./media/image76.png" style="width:4.40625in;height:1.13542in"
 alt="Graphical user interface Description automatically generated with low confidence" />
 </p>
+
 Now we can see the spice file getting generated after using the
 above-mentioned commands -
+
 <p align="center">
 <img src="./media/image77.png" style="width:7.04927in;height:1.43157in"
 alt="Text Description automatically generated with low confidence" />
 </p>
+
 Sample ext file and spice file are shown in the figure below-
+
 <p align="center">
 <img src="./media/image78.png" style="width:6.91936in;height:2.93609in"
 alt="Text Description automatically generated" />
-
+</p>
+<p align="center"> 
 <img src="./media/image79.png" style="width:6.91816in;height:2.65505in"
 alt="Text Description automatically generated" />
 </p>
+
 Now the SPICE file generated is very rudimentary and in initial stages
 this needs to be linked with correct transistor model in order for it to
 work. Also we need to create a testbench setup so that we can simulate
 the model and see it’s functioning. After updating the spice file by
 linking correct libs and setting up the testbench the final file look
 like-
+
 <p align="center">
 <img src="./media/image80.png" style="width:7.0334in;height:5.2583in"
 alt="Text Description automatically generated" />
 </p>
+
 Now we can simulate this file using the following command –
-<p align="center">
+
 `ngspice \<path to the spice model created with testbench\>`
 
+<p align="center">
 <img src="./media/image81.png" style="width:7.088in;height:3.66808in"
 alt="Text Description automatically generated" /> 
 </p>
+
 Now we can plot the timing characteristics of the following inverter
 using the command -
 
 `***plot y vs time a***`
+
 <p align="center">
 <img src="./media/image82.png" style="width:7.09304in;height:4.275in"
 alt="Graphical user interface Description automatically generated" />
 </p>
+
 ## **Lab – Calculating the Characteristics of an Inverter using ngspice**
 
 We can now effectively calculate the different characteristics of this
@@ -948,10 +993,12 @@ different conditions mentioned below –
 - Propagation delay when input is rising
 
 ### **Falling Condition Delay Calculation –**
+
 <p align="center">
 <img src="./media/image85.png" style="width:2.64435in;height:2.63017in"
 alt="Graphical user interface Description automatically generated" />
 </p>
+
 Values 50 % a - <img src="./media/image86.png"
 style="width:3.48958in;height:0.3125in" />
 
@@ -962,13 +1009,16 @@ style="width:2.99173in;height:0.39153in" />
 2.152ns = 0.05ns***`
 
 ### **Rising Condition Delay Calculation –**
+
 <p align="center">
 <img src="./media/image88.png" style="width:2.96856in;height:2.99237in"
 alt="Graphical user interface Description automatically generated" />
-</p> <p align="center">
+</p> 
+<p align="center">
 <img src="./media/image89.png" style="width:2.97613in;height:0.74789in"
 alt="Graphical user interface, text Description automatically generated" />
 </p>
+
 `***Cell propagation delay when input is rising = 4.0723ns – 4.05ns =
 0.023ns***`
 
@@ -976,35 +1026,43 @@ alt="Graphical user interface, text Description automatically generated" />
 
 We can download the testcase for DRC testing using the wget command
 shown below –
+
 <p align="center">
 <img src="./media/image90.png"
 style="width:6.26806in;height:0.18056in" />
 </p>
+
 Once we have downloaded it, please extract the tar using the command,
 this will automatically list out and create a dirtectory of all the
 files –
 
 `tar – xvf \<tar file name\>`
+
 <p align="center">
 <img src="./media/image91.png" style="width:7.00264in;height:3.93579in"
 alt="Text Description automatically generated" />
 </p>
+
 ## **Lab – Loading Sky130 Tech Rules in Magic**
 
 We will launch an emoty magic window using the command mentioned below –
 
 `magic -t sky130.tech`
+
 <p align="center">
 <img src="./media/image92.png"
 style="width:7.06094in;height:4.11093in" />
 </p>
+
 Once launched we can go to File and Open any corresponding file we want
 to open, for this example we will open met3.mag for demonstration
 purposes.
+
 <p align="center">
 <img src="./media/image93.png"
 style="width:6.9467in;height:4.01671in" />
-
+</p>
+<p align="center">
 <img src="./media/image94.png" style="width:6.88178in;height:3.98908in"
 alt="A picture containing calendar Description automatically generated" />
 </p>
@@ -1013,10 +1071,12 @@ errors which there are in the tool, we can hover our mouse and click s
 to select the object and writing dry why will list out all the drc
 errors corresponding to that object which is demonstrated in the
 snapshot below.
+
 <p align="center">
 <img src="./media/image95.png" style="width:7.0875in;height:2.55903in"
 alt="Graphical user interface, text, application Description automatically generated" />
 </p>
+
 There are some standard commmand / rules provided for the skywater 130nm
 Technological process at the following link we can review all the DRC
 rules specified by the foundry converned with 130nm process -
@@ -1026,10 +1086,12 @@ Further, below mentioned snapshot shares the different DRC rules there
 are corresponding to the Metal 3 layer which is opened in Magic for
 reviewing. All the `***DRC why***` that are mentioned in the terminal have
 a code corresponding to any one of the laws/rules mentioned below.
+
 <p align="center">
 <img src="./media/image96.png" style="width:6.26806in;height:3.19931in"
 alt="Graphical user interface, text, application, email Description automatically generated" />
 </p>
+
 Now we will generate a metal island on this layout by left clicking and
 right clicking and then pressing p while selecting the metal1 layer. Now
 type in the terminal window -
@@ -1039,13 +1101,16 @@ type in the terminal window -
 This will automatically generate via cuts and via on metal3 layer based
 on different DRC rules and it will automatically change the pitch or via
 design based on DRC regulations.
+
 <p align="center">
 <img src="./media/image97.png" style="width:7.0875in;height:3.52917in"
 alt="image" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image98.png" style="width:6.26806in;height:4.05556in"
 alt="Square Description automatically generated" />
 </p>
+
 Once this is done, we will use a command know as snap int which
 basically helps in aligning the selection with the boundary of the
 actual design. After turning the snap on we will measure the distance
@@ -1056,67 +1121,84 @@ via cut and metal3 layer should be greater than \> 0.065um.
 On checking the box properties, we found that the distance it
 automatically kept is 0.1um which is \> 0.065um and honours the DRC
 rules automatically.
+
 <p align="center">
 <img src="./media/image99.png" style="width:7.0875in;height:2.45625in"
 alt="image" />
 </p>
+
 ## **Lab – Generating the Poly.9 Error**
 
 This lab is for generating the Poly.9 error and understanding how it can
 be fixed if such kind of errors are popping out in DRC checks. Currently
 the design is DRC proven as shown below and we are using poly.mag as a
 sample layout here.
+
 <p align="center">
 <img src="./media/image100.png"
 style="width:7.11508in;height:4.13299in" />
 </p>
+
 Currently there is incorrectly defined rule in DRC with respect to the
 Poly.9 error because poly.9 signifies that difference between diff/tap
 and poly should be equal to 0.48um and not under it.
+
 <p align="center">
 <img src="./media/image101.png"
 style="width:7.33893in;height:0.50818in" />
 </p>
+
 But in our case currently the distance between ppolyres and poly is less
 than 0.48um. We can calculate it by using the box property command.
+
 <p align="center">
 <img src="./media/image102.png" style="width:3.36134in;height:3.3768in"
 alt="A picture containing chart Description automatically generated" /><img src="./media/image103.png" style="width:3.64948in;height:2.77815in"
 alt="A picture containing rectangle Description automatically generated" />
-</p> <p align="center">
+</p> 
+<p align="center">
 <img src="./media/image104.png" style="width:3.47853in;height:1.37584in"
 alt="Text Description automatically generated with medium confidence" /><img src="./media/image105.png" style="width:3.55601in;height:1.64246in"
 alt="Graphical user interface, text, application Description automatically generated" />
 </p>
+
 Box property stated that the distance between poly and ppolyres is
 0.21um which is less than 0.48um and actually this should have been
 reported as a DRC violation but it is not.
+
 <p align="center">
 <img src="./media/image106.png" style="width:7.15616in;height:1.52463in"
 alt="Text Description automatically generated" />
 </p>
+
 Now in order to fix it we will open the sky130.tech and update the
 conditions there, on opening the sky130.tech file we found two lines
 corresponding to poly.9 DRC rules. Both the rules are mentioned below -
+
 <p align="center">
 <img src="./media/image107.png" style="width:7.20851in;height:1.594in"
 alt="Text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image108.png" style="width:7.19585in;height:3.27669in"
 alt="Text Description automatically generated" />
 </p>
+
 The main problem seem here was the rule was defined between poly and
 other layers but the rule didn’t consider other npolyres or ppolyres
 which are very near to the poly metal. So we will add the rules
 corresponding to \*poly layers so that these also get reported as
 violations.
+
 <p align="center">
 <img src="./media/image109.png" style="width:7.25714in;height:1.84901in"
 alt="Text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image110.png"
 style="width:7.44152in;height:0.81406in" />
 </p>
+
 We have used allpolynonres because it covered all the \*poly layers and
 creating DRC rules w.r.t them is the goal here. So we have created two
 different goals at both the places where epoly.9 was earlier defined.
@@ -1128,48 +1210,58 @@ command –
 
 As soon as it is loaded now we are able to see DRC violations being
 flagged automatically.
+
 <p align="center">
 <img src="./media/image111.png" style="width:2.14499in;height:2.25383in"
 alt="Chart, bar chart Description automatically generated" />
 </p>
+
 We were able to fix the wrong DRC error and updated it with the correct
 definition, so tool automatically flags the poly layer DRC errors.
 
-## **Lab - Lab challenge exercise to describe DRC error as Geometrical
-Construct**
+## **Lab - Lab challenge exercise to describe DRC error as Geometrical Construct**
 
 We will first load the nwell.mag in to the Magic Window, we will use the
 same method defined earlier.
+
 <p align="center">
 <img src="./media/image112.png"
 style="width:7.21788in;height:4.2023in" />
 </p>
+
 On further checking we can find that a DRC error is being flagged in the
 following layout under the impression of nwell.6. This error basically
 says that nwell should be enclosed within deepnwell should be atleast
 1.030um.
+
 <p align="center">
 <img src="./media/image113.png"
 style="width:7.0875in;height:0.38333in" />
 </p>
+
 In our case all the three directions, left, right and bottom are showing
 exact value of 1.030um measured using the box command. Nwell to deep
 nwell overlap is around 1.03um and non-overlap extension is around
 0.68um.
+
 <p align="center">
 <img src="./media/image114.png" style="width:7.24348in;height:2.81521in"
 alt="Text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image115.png" style="width:7.05995in;height:3.49165in"
 alt="Graphical user interface Description automatically generated" />
 </p>
+
 However, on measuring the top overlap between nwell and deep newel we
 found that is only 0.56um which is less than the defined DRC value of
 1.03um.
+
 <p align="center">
 <img src="./media/image116.png" style="width:7.05881in;height:3.15636in"
 alt="Graphical user interface, application Description automatically generated" />
 </p>
+
 In order to view these internal layers we have to use the following
 commands –
 
@@ -1178,13 +1270,16 @@ commands –
 ***Cif see dnwell_shrink***
 
 ***Cif see nwell_missing***`
+
 <p align="center">
 <img src="./media/image117.png" style="width:7.22969in;height:3.14707in"
 alt="Graphical user interface, text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image118.png" style="width:7.20551in;height:3.66742in"
 alt="Graphical user interface, text Description automatically generated" />
 </p>
+
 We have understood the error and this can be fixed by increasing the
 size of nwell region overlap with the deep nwell region and then
 re-iteration will resolve the issue.
@@ -1195,56 +1290,71 @@ Now, it is common knowing that a nwell must have a substrate contact and
 it should be tapped atleast at one place. But it was not mentioned as a
 DRC rules so in this lab we will be defining those DRC rules in order to
 flag a DRC violation whenever a nwell is untapped.
+
 <p align="center">
 <img src="./media/image119.png" style="width:7.22724in;height:3.76816in"
 alt="Text Description automatically generated" />
 </p>
+
 We can see in the below snapshot that no DRC violation error is flagged
 for the nwell even if doesn’t have any tap contact.
+
 <p align="center">
 <img src="./media/image120.png"
 style="width:7.09987in;height:5.01302in" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image121.png" style="width:7.16247in;height:2.28221in"
 alt="Text Description automatically generated" />
 </p>
+
 For defining the DRC rule, we will create a templayer and use a command
 bloat-all on nwell. Afterwards another temp layer which is nanded with
 the nwell-tapped and if the area is equal zero then the max cif style
 error will pop up. We are giving it a constraints so that it only runs
 when DRC (full) is ran on the design.
+
 <p align="center">
 <img src="./media/image122.png" style="width:7.18463in;height:2.08232in"
 alt="Graphical user interface, text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image123.png" style="width:7.19047in;height:1.66896in"
 alt="Text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image124.png" style="width:7.15257in;height:2.30917in"
 alt="Text Description automatically generated" />
 </p>
+
 After defining the rule its time to test them, we will load the latest
 tech and write drc check, no errors should pop up because the custom DRC
 check created will only work when DRC style full is used. To perform
 that kindof checks use the command –
 
 `***Drc style drc(full)***`
+
 <p align="center">
 <img src="./media/image125.png" style="width:6.26806in;height:1.76875in"
 alt="Text Description automatically generated" />
 </p>
+
 As soon as the command was run all the nwell not containing the tap
 contact are getting flagged as DRC errors.
+
 <p align="center">
 <img src="./media/image126.png"
 style="width:7.04001in;height:4.43257in" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image127.png" style="width:7.05106in;height:4.05596in"
 alt="Graphical user interface, text Description automatically generated" />
-</p> <p align="center">
+</p>
+<p align="center">
 <img src="./media/image128.png" style="width:7.0137in;height:4.05234in"
 alt="Graphical user interface, text, application Description automatically generated" />
 </p>
+
 We have successfully demonstrated and created a custom DRC rule which
 runs only when full style DRC is run and is functioning as per
 expectations.
@@ -1258,20 +1368,26 @@ Clock Gating – We can imagine 2 different types of clock gating one with
 ‘and’ and other with ‘or’. When using the ‘and’ gate ‘EN’ signal needs
 to be always ‘High’ whereas in ‘or’ gate the ‘EN’ signal needs to be
 always ‘Low’.
+
 <p align="center">
 <img src="./media/image129.png"
 style="width:4.60166in;height:3.36535in" />
 </p>
+
 Now the question arises can be replace the pre-existing buffers in out
 CTS with an AND gate for performing effective clock gating ? To answer
 that we need to investigate certain timing characteristics of the cell
 replaced and the Buffer cell.
+
 <p align="center">
 <img src="./media/image130.png" style="width:2.90751in;height:2.49538in"
 alt="Diagram, schematic Description automatically generated" />
+</p>
+<p align="center">    
 <img src="./media/image131.png" style="width:3.0448in;height:2.47599in"
 alt="Diagram, schematic Description automatically generated" />
 </p>
+
 In order to replace the cell we need to characterize them and to
 characterize them VLSi engineers came up with a solution called as Delay
 Tables.
@@ -1279,10 +1395,12 @@ Tables.
 Delay tables are nothing but delay values of the cell when the input
 transition time and output load are varied within certain ranges and
 those are then characterized and saved in the liberty.
+
 <p align="center">
 <img src="./media/image132.png" style="width:3.89834in;height:1.86968in"
 alt="A picture containing text, scoreboard, black Description automatically generated" />
 </p>
+
 So, if the delay tables are effectively matching with the updated cell,
 we can replace the current cells with new ones to which can have a
 variety of advantages.
@@ -1294,10 +1412,12 @@ In order to do so initially we will launch a Inverter GUI in a Magic Shell by
 using the following command –
 
 `magic -T \<Tech File Path\> \<Mag File\>`
+
 <p align="center">
 <img src="./media/image133.png"
 style="width:7.0875in;height:0.15694in" />
 </p>
+
 Now for proceeding ahead the only information we need as an input are -
 
 1.  Input / Output Pins Location
@@ -1310,10 +1430,12 @@ We don’t need the logic functioning of the cell and therefore here the
 LEF file comes into picture. LEF file in turn protect our IP’s and
 doesn’t mention the functioning of the cell but just mentions the above
 information.
+
 <p align="center">
 <img src="./media/image134.png" style="width:6.30028in;height:5.29221in"
 alt="Text Description automatically generated with medium confidence" />
 </p>
+
 Our objective for this Lab session will be to extract a LEF file out of
 the Mag File. Certain conditions we need to confirm before proceeding
 ahead is –
