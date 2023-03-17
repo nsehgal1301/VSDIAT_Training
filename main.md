@@ -1,4 +1,17 @@
+# VSDIAT Training using OPENLANE
+<p align="center">
 <img src="./media/image1.png" style="width:7.2089in;height:3.65876in" />
+</p>
+
+# **Table of Contents**
+- [Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK](#day--1-inception-of-open-source-eda-openlane-and-sky130-pdk)
+  - [Theory – Fundamentals of SoC](#theory--fundamentals-of-soc)
+  - [Theory - Understanding RISC-V Architecture](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/ReadMe.md#theory--understanding-risc-v-architecture)
+  - [Theory - Understanding ASIC Design Flow](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/ReadMe.md#theory--understanding-asic-design-flow) 
+    - [Process Design Kits](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/ReadMe.md#process-design-kits)
+    - [Skywater 130nm Open PDK Example](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/ReadMe.md#skywater-130nm-open-pdk-example)
+    - [RTL2GDS ASIC Design Flow](https://github.com/nsehgal1301/openLANE-Workshop/edit/main/ReadMe.md#rtl2gds-asic-design-flow) 
+
 
 # **Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK**
 
