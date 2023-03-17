@@ -415,8 +415,8 @@ nominal range not too low and not too high to avoid congestion.
 If all the cells in core takes up all the available space, then that is
 100% utilization and utilization factor become 1.
 
-UF can be represented as = (Area Utilized by Netlist) / (Area of the
-total chip)
+UF can be represented as = `(Area Utilized by Netlist) / (Area of the
+total chip)`
 <p align="center">
 <img src="./media/image36.png" style="width:7.0875in;height:5.26458in"
 alt="image" />
@@ -445,7 +445,7 @@ happens.
 <p align="center">
 <img src="./media/image39.png" style="width:3.56897in;height:2.7179in"
 alt="image" />
-</p><p align="center">
+</p> <p align="center">
 <img src="./media/image40.png" style="width:3.05139in;height:2.81042in"
 alt="image" />
 </p>
