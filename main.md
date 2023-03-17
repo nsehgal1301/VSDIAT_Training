@@ -1,8 +1,8 @@
 <img src="./media/image1.png" style="width:7.2089in;height:3.65876in" />
 
-**Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK**
+# **Day – 1 Inception of Open-Source EDA, OpenLANE and Sky130 PDK**
 
-**Theory – Fundamentals of SoC**
+## **Theory – Fundamentals of SoC**
 
 A simple package board can be represented using a simple block diagram
 in which the main brain of the board is it’s Processor/SoC and the SoC
@@ -43,7 +43,7 @@ top level requirements.
 
 Fig 3. Depiction of different components of a RISC-V Architecture Core
 
-**Theory – Understanding RISC-V Architecture**
+## **Theory – Understanding RISC-V Architecture**
 
 RISC-V is an open instruction set architecture and is way through which
 we can communicate with the computer. A computer code is initially
@@ -70,7 +70,7 @@ Format.
 Fig 5 – Flowchart defining all the steps performed for executing an
 Instruction
 
-**Theory – Understanding ASIC Design Flow**
+## **Theory – Understanding ASIC Design Flow**
 
 ASIC design stands for Application Specific Integrated Circuits and it
 is the methodology of reducing the cost and size of the an electronic
@@ -84,7 +84,7 @@ system or SoC. It consists of various components like –
 3.  EDA Tools – Required for simulation and connecting the simulation
     world to actual hardware.
 
-**Process Design Kits**
+### **Process Design Kits**
 
 Process Design Kits is basically a collection of different type of
 process data that will be required to manufacture the Hardware based on
@@ -103,7 +103,7 @@ design an IC. It contains different type of information like –
 
 6.  Design Rule Manual etc.
 
-**Skywater 130nm Open PDK Example**
+### **Skywater 130nm Open PDK Example**
 
 Skywater 130nm is an open-access PDK created by Google and skywater,
 enabling complete ASIC design process to be open-source. Lower
@@ -114,7 +114,7 @@ perform automated tasks as manufacturing of 130nm is relatively much
 cheaper and it can readily used in places which doesn’t operate at High
 Speeds.
 
-**Overview of RTL2GDS ASIC Design Flow**
+## **Theory - Overview of RTL2GDS ASIC Design Flow**
 
 There are various components of a simple RTL2GDS ASIC design flow and it
 converts the RTLs into corresponding GDSII format which is a must for
@@ -200,7 +200,7 @@ alt="Text Description automatically generated with medium confidence" />
 
 Fig 12. Sign Off Processes
 
-**Theory – Introduction to OpenLane and Strive Chipset**
+## **Theory – Introduction to OpenLane and Strive Chipset**
 
 Users generally face quite a few challenges when using open source EDA,
 problems like missing EDA tools for some steps, calibration or tool
@@ -231,7 +231,7 @@ clean we mean that –
 
 3.  The chipset should not have any Timing violations.
 
-**Theory – OpenLane ASIC Flow**
+## **Theory – OpenLane ASIC Flow**
 
 Openlane as discussed is an open-access end to end EDA solution and can
 be used to harden chips or Macros. OpenLane has two modes of operation –
@@ -261,7 +261,7 @@ alt="Diagram Description automatically generated" />
 
 <img src="./media/image20.png" style="width:7.0875in;height:5.0375in" />
 
-**OpenROAD App -**
+### **OpenROAD App -**
 
 OpenRoad app is automatic placement and routing tool and it performs the
 following function –
@@ -278,13 +278,13 @@ following function –
 
 6.  Routing: Global and Detailed
 
-**Logic Equivalence Checking –**
+### **Logic Equivalence Checking –**
 
 After performing quite a few iterations LEC needs to be performed in
 order to check whether updating the design has caused any effect on the
 Functionality of the chip or not.
 
-**Antenna Rule Violation –**
+### **Antenna Rule Violation –**
 
 When a metal wire segment is fabricated and it is long enough, it can
 act as antenna. If charge gets accumulated on it, it can damage our
@@ -314,7 +314,7 @@ diode next to every cell after placement. And then we run the Antenna
 Checker if it reports a violation, we replace the fake cell by original
 cell else keep it as it is.
 
-**Lab – Understanding OpenLane ASIC Flow**
+## **Lab – Understanding OpenLane ASIC Flow**
 
 Openlane is thewrapper which contains all the tool and is a streamline
 flow for running RTL2GDS full flow. Directory structure of OpenLane are
@@ -351,9 +351,9 @@ alt="Text Description automatically generated" />
 To run openlane first run the docker command and then use the flow.tcl
 for interactive mode as shown below-
 
-Docker
+`Docker
 
-./flow.tcl -interactive
+./flow.tcl -interactive`
 
 <img src="./media/image29.png" style="width:7.21578in;height:2.38314in"
 alt="A screenshot of a computer Description automatically generated with medium confidence" />
@@ -361,7 +361,7 @@ alt="A screenshot of a computer Description automatically generated with medium 
 Now we will load the required packages to run openlane using the command
 –
 
-Package require openlane 0.9
+`Package require openlane 0.9`
 
 <img src="./media/image30.png" style="width:3.78125in;height:0.53125in"
 alt="Text Description automatically generated" />
@@ -369,7 +369,7 @@ alt="Text Description automatically generated" />
 Afterwards, we will load the picorv32a design for flow flushing
 openlane, for loading the design use the command –
 
-Prep -design picorv32a
+`prep -design picorv32a`
 
 <img src="./media/image31.png" style="width:7.13731in;height:4.83702in"
 alt="Text Description automatically generated" />
@@ -397,10 +397,10 @@ alt="Text Description automatically generated" />
 <img src="./media/image35.png" style="width:7.24459in;height:1.95281in"
 alt="Text Description automatically generated" />
 
-**Day – 2 Good Floorplan vs Bad Floorplan and Introduction to Library
+# **Day – 2 Good Floorplan vs Bad Floorplan and Introduction to Library
 Cells**
 
-**Theory – Utilization Factor and Aspect Ratio**
+## **Theory – Utilization Factor and Aspect Ratio**
 
 Initial requirement of creating any chip is to define its area and
 aspect ratio along with the utilization factor.
@@ -444,7 +444,7 @@ happens.
 alt="image" /><img src="./media/image40.png" style="width:3.05139in;height:2.81042in"
 alt="image" />
 
-**Theory – Concept of Pre-Placed Cells**
+## **Theory – Concept of Pre-Placed Cells**
 
 Pre-placed cells --\> If there is large combinational circuit within our
 complete chip, like circuit of 50k - 100k gates, we can implement that
@@ -509,7 +509,7 @@ alt="image" />
 <img src="./media/image47.png" style="width:7.0875in;height:5.32986in"
 alt="image" />
 
-**Theory – Concept of Power Planning**
+## **Theory – Concept of Power Planning**
 
 All the standard cells are placed in certain rows in an orderly fashion
 and parallel lines of VDD and VSS run alternatively through the base
@@ -533,7 +533,7 @@ are also active devices and the rails run within the core.
 <img src="./media/image49.png" style="width:6.02934in;height:4.10345in"
 alt="image" />
 
-**Lab – Running Floorplan Using OpenLane**
+## **Lab – Running Floorplan Using OpenLane**
 
 Reviewing the configuration filed, go to ***openlane -\>
 configuration*** there will lots of file containing the configuration
@@ -558,9 +558,9 @@ sky130_hs_fd_hd_config.tcl. Please note that all three tickles have
 different precedence order. Flow.tcl has the lowest precedence and it
 increase in the following order –
 
-Flow.tcl \< config.tcl \< sky130_hs­\_fd_hd_config.tcl
+`Flow.tcl \< config.tcl \< sky130_hs_fd_hd_config.tcl`
 
-Alld the logs of the Floorplan are kept under the following directory –
+All the logs of the Floorplan are kept under the following directory –
 
 <img src="./media/image53.png"
 style="width:7.15321in;height:0.49893in" />
@@ -570,7 +570,7 @@ decap cells as placement is not done and that is present under the
 results folder which can be viewed in Magic correspondingly using the
 command -
 
-Magic -T \<tech file\> read lef \<lef file\> read def \<def file\>
+`magic -T \<tech file\> read lef \<lef file\> read def \<def file\>`
 
 <img src="./media/image54.png"
 style="width:7.05389in;height:0.31885in" />
@@ -593,7 +593,7 @@ is not known. It is shown in the figure below –
 <img src="./media/image57.png" style="width:6.26806in;height:5.03194in"
 alt="Diagram Description automatically generated" />
 
-**Lab – Congestion Aware Placement using RePlace**
+## **Lab – Congestion Aware Placement using RePlace**
 
 After running floorplan and viewing it in Magic, next steps are obvious
 we need to run placement in order to place the standard cells in correct
@@ -601,7 +601,7 @@ rows and cells.
 
 In order to perform placement use the following command in openlane –
 
-Run_placement
+`Run_placement`
 
 Various Logs and Reports generated from run_placement are described
 below –
@@ -625,7 +625,7 @@ its not correct but it can give a very coarse value for the same.
 <img src="./media/image61.png" style="width:7.04377in;height:3.66391in"
 alt="A picture containing text Description automatically generated" />
 
-**Theory – Circuit design step and 2.3.3 Layout design step**
+## **Theory – Circuit design step and 2.3.3 Layout design step**
 
 Design steps
 
@@ -671,7 +671,7 @@ Output of this step are:
 3.  Extracted SPICE netlist (.cir) --\> Have parasitics (R and C) of
     each element
 
-**Theory – Timing Characterization Parameters**
+## **Theory – Timing Characterization Parameters**
 
 Characterization helps to get timing, noise and power
 information.Outputs of this steps are timing, noise and power.libs, and
@@ -737,10 +737,10 @@ pick. So, picking right value of threshold is necessary (Not always
 Another reason for negative delay is, if you have huge wire delays, so
 output waveform curve will be very odd. It can lead to negative slew.
 
-**Day – 3 Design Library Cell using Magic Layout and ngspice
+# **Day – 3 Design Library Cell using Magic Layout and ngspice
 Characterization**
 
-**Lab – IOPlacer Experiment for Equi-distant Bumps**
+## **Lab – IOPlacer Experiment for Equi-distant Bumps**
 
 In openLANE we can make changes on the fly. In current floorplan, all
 pins at equidistant (As seen in magic). We can change it by "FP_IO_MODE"
@@ -755,7 +755,7 @@ design.
 <img src="./media/image69.png" style="width:7.0875in;height:3.13542in"
 alt="image" />
 
-**Lab – Steps to Gitclone vsdstdcelldesign**
+## **Lab – Steps to Gitclone vsdstdcelldesign**
 
 Before proceeding ahead we need to clone the whole directory containing
 the std cell design into our local directory and for that we will use
@@ -767,7 +767,7 @@ alt="Text Description automatically generated" />
 Afterwards, we will run Magic and try to visualize the std cell layout.
 The command used for the same is-
 
-Magic -T \<Tech File Path\> \<Path to Layout File\>
+`magic -T \<Tech File Path\> \<Path to Layout File\>`
 
 <img src="./media/image71.png"
 style="width:7.67236in;height:0.18701in" />
@@ -778,7 +778,7 @@ corresponding to different layers.
 <img src="./media/image72.png" style="width:4.34742in;height:4.51118in"
 alt="A picture containing treemap chart Description automatically generated" />
 
-**Theory – CMOS Fabrication Process**
+## **Theory – CMOS Fabrication Process**
 
 - Mask 1 : Used for creation of Isolation between wells to protect
   active regions. SiO2-\>Si3N4-\>Mask over active region-\>Oxidation
@@ -811,7 +811,7 @@ alt="A picture containing treemap chart Description automatically generated" />
 - Mask 12-16 : Deposit SiO2 and do CMP and use masks 12 to 16 created
   drilling contacts to local interconnects to form higher level routing.
 
-**Lab – Introduction to Sky130 basic layers layout and LEF using
+## **Lab – Introduction to Sky130 basic layers layout and LEF using
 Inverter**
 
 We can view different layers in the magic layout and by over hover a
@@ -827,11 +827,11 @@ style="width:5.64583in;height:2.05208in" />
 To extract the spef from the current layout we need to use the command
 mentioned below –
 
-- extract all : to extract all data
+`- extract all : to extract all data
 
 - ext2spice cthresh 0 rthresh 0 : to extract all parasitic R and C
 
-- ext2spice : generates spice netlist \[.spice\]
+- ext2spice : generates spice netlist \[.spice\]`
 
 <img src="./media/image75.png"
 style="width:4.76042in;height:0.48958in" />
@@ -865,27 +865,27 @@ alt="Text Description automatically generated" />
 
 Now we can simulate this file using the following command –
 
-Ngspice \<path to the spice model created with testbench\>
+`ngspice \<path to the spice model created with testbench\>`
 
 <img src="./media/image81.png" style="width:7.088in;height:3.66808in"
 alt="Text Description automatically generated" />  
 Now we can plot the timing characteristics of the following inverter
 using the command -
 
-***plot y vs time a***
+`***plot y vs time a***`
 
 <img src="./media/image82.png" style="width:7.09304in;height:4.275in"
 alt="Graphical user interface Description automatically generated" />
 
-**Lab – Calculating the Characteristics of an Inverter using ngspice**
+## **Lab – Calculating the Characteristics of an Inverter using ngspice**
 
 We can now effectively calculate the different characteristics of this
 inverter using by zooming in the plot and noting down the values for 20%
 and 80% output respectively when the input rise or fall is happening.
 
-Rise Transition– 20% to 80% output
+`Rise Transition– 20% to 80% output
 
-Fall Transition – 80% to 20% output
+Fall Transition – 80% to 20% output`
 
 20% - ‌<img src="./media/image83.png"
 style="width:3.74941in;height:0.36798in" />
@@ -893,8 +893,8 @@ style="width:3.74941in;height:0.36798in" />
 80% - <img src="./media/image84.png"
 style="width:3.57292in;height:0.32292in" />
 
-On calculating the ***Rise Transition = Fall Transition = 2.23433ns –
-2.17797ns = 0.05636ns***
+On calculating the `***Rise Transition = Fall Transition = 2.23433ns –
+2.17797ns = 0.05636ns***`
 
 Now we will calculate the Cell Delay which can be calculated for two
 different conditions mentioned below –
@@ -903,7 +903,7 @@ different conditions mentioned below –
 
 - Propagation delay when input is rising
 
-**Falling Condition Delay Calculation –**
+### **Falling Condition Delay Calculation –**
 
 <img src="./media/image85.png" style="width:2.64435in;height:2.63017in"
 alt="Graphical user interface Description automatically generated" />
@@ -914,10 +914,10 @@ style="width:3.48958in;height:0.3125in" />
 Value 50% y - <img src="./media/image87.png"
 style="width:2.99173in;height:0.39153in" />
 
-***Cell Propagation Delay when Input is falling equals to = 2.203ns –
-2.152ns = 0.05ns***
+`***Cell Propagation Delay when Input is falling equals to = 2.203ns –
+2.152ns = 0.05ns***`
 
-**Rising Condition Delay Calculation –**
+### **Rising Condition Delay Calculation –**
 
 <img src="./media/image88.png" style="width:2.96856in;height:2.99237in"
 alt="Graphical user interface Description automatically generated" />
@@ -925,10 +925,10 @@ alt="Graphical user interface Description automatically generated" />
 <img src="./media/image89.png" style="width:2.97613in;height:0.74789in"
 alt="Graphical user interface, text Description automatically generated" />
 
-***Cell propagation delay when input is rising = 4.0723ns – 4.05ns =
-0.023ns***
+`***Cell propagation delay when input is rising = 4.0723ns – 4.05ns =
+0.023ns***`
 
-**Lab – Introduction to DRC’s and Downloading DRC Testcase**
+## **Lab – Introduction to DRC’s and Downloading DRC Testcase**
 
 We can download the testcase for DRC testing using the wget command
 shown below –
@@ -940,16 +940,16 @@ Once we have downloaded it, please extract the tar using the command,
 this will automatically list out and create a dirtectory of all the
 files –
 
-Tar – xvf \<tar file name\>
+`tar – xvf \<tar file name\>`
 
 <img src="./media/image91.png" style="width:7.00264in;height:3.93579in"
 alt="Text Description automatically generated" />
 
-**Lab – Loading Sky130 Tech Rules in Magic**
+## **Lab – Loading Sky130 Tech Rules in Magic**
 
 We will launch an emoty magic window using the command mentioned below –
 
-Magic -t sky130.tech
+`magic -t sky130.tech`
 
 <img src="./media/image92.png"
 style="width:7.06094in;height:4.11093in" />
@@ -964,7 +964,7 @@ style="width:6.9467in;height:4.01671in" />
 <img src="./media/image94.png" style="width:6.88178in;height:3.98908in"
 alt="A picture containing calendar Description automatically generated" />
 
-We can use the command ***‘drc why’*** and it can report various DRC
+We can use the command `***‘drc why’***` and it can report various DRC
 errors which there are in the tool, we can hover our mouse and click s
 to select the object and writing dry why will list out all the drc
 errors corresponding to that object which is demonstrated in the
@@ -980,7 +980,7 @@ rules specified by the foundry converned with 130nm process -
 
 Further, below mentioned snapshot shares the different DRC rules there
 are corresponding to the Metal 3 layer which is opened in Magic for
-reviewing. All the ***DRC why*** that are mentioned in the terminal have
+reviewing. All the `***DRC why***` that are mentioned in the terminal have
 a code corresponding to any one of the laws/rules mentioned below.
 
 <img src="./media/image96.png" style="width:6.26806in;height:3.19931in"
@@ -990,7 +990,7 @@ Now we will generate a metal island on this layout by left clicking and
 right clicking and then pressing p while selecting the metal1 layer. Now
 type in the terminal window -
 
-Cif see VIA2
+`cif see VIA2`
 
 This will automatically generate via cuts and via on metal3 layer based
 on different DRC rules and it will automatically change the pitch or via
@@ -1016,7 +1016,7 @@ rules automatically.
 <img src="./media/image99.png" style="width:7.0875in;height:2.45625in"
 alt="image" />
 
-**Lab – Generating the Poly.9 Error**
+## **Lab – Generating the Poly.9 Error**
 
 This lab is for generating the Poly.9 error and understanding how it can
 be fixed if such kind of errors are popping out in DRC checks. Currently
@@ -1080,7 +1080,7 @@ different goals at both the places where epoly.9 was earlier defined.
 Now we will load the skytech130.tech file again by using the following
 command –
 
-Load tech sky130.tech
+`load tech sky130.tech`
 
 As soon as it is loaded now we are able to see DRC violations being
 flagged automatically.
@@ -1091,7 +1091,7 @@ alt="Chart, bar chart Description automatically generated" />
 We were able to fix the wrong DRC error and updated it with the correct
 definition, so tool automatically flags the poly layer DRC errors.
 
-**Lab - Lab challenge exercise to describe DRC error as Geometrical
+## **Lab - Lab challenge exercise to describe DRC error as Geometrical
 Construct**
 
 We will first load the nwell.mag in to the Magic Window, we will use the
@@ -1129,11 +1129,11 @@ alt="Graphical user interface, application Description automatically generated" 
 In order to view these internal layers we have to use the following
 commands –
 
-***Cif ostyle drc***
+`***Cif ostyle drc***
 
 ***Cif see dnwell_shrink***
 
-***Cif see nwell_missing***
+***Cif see nwell_missing***`
 
 <img src="./media/image117.png" style="width:7.22969in;height:3.14707in"
 alt="Graphical user interface, text Description automatically generated" />
@@ -1145,7 +1145,7 @@ We have understood the error and this can be fixed by increasing the
 size of nwell region overlap with the deep nwell region and then
 re-iteration will resolve the issue.
 
-**Lab - Lab challenge to find missing or incorrect rules and Fix Them**
+## **Lab - Lab challenge to find missing or incorrect rules and Fix Them**
 
 Now, it is common knowing that a nwell must have a substrate contact and
 it should be tapped atleast at one place. But it was not mentioned as a
@@ -1184,7 +1184,7 @@ tech and write drc check, no errors should pop up because the custom DRC
 check created will only work when DRC style full is used. To perform
 that kindof checks use the command –
 
-***Drc style drc(full)***
+`***Drc style drc(full)***`
 
 <img src="./media/image125.png" style="width:6.26806in;height:1.76875in"
 alt="Text Description automatically generated" />
@@ -1205,10 +1205,10 @@ We have successfully demonstrated and created a custom DRC rule which
 runs only when full style DRC is run and is functioning as per
 expectations.
 
-**Day – 4 Pre-Layout Timing Analysis and Importance of a Good Clock
+# **Day – 4 Pre-Layout Timing Analysis and Importance of a Good Clock
 Tree**
 
-**Theory – Introduction to Delay Tables**
+## **Theory – Introduction to Delay Tables**
 
 Clock Gating – We can imagine 2 different types of clock gating one with
 ‘and’ and other with ‘or’. When using the ‘and’ gate ‘EN’ signal needs
@@ -1243,13 +1243,13 @@ So, if the delay tables are effectively matching with the updated cell,
 we can replace the current cells with new ones to which can have a
 variety of advantages.
 
-**Lab – Extracting LEF File from Layout File**
+## **Lab – Extracting LEF File from Layout File**
 
-Till now we have completed the ………… and now it’s time to …… . In order
-to do so initially we will launch a Inverter GUI in a Magic Shell by
+Till now we have completed the cell extraction and characterization now we will convert the corresponding cell to LEF. 
+In order to do so initially we will launch a Inverter GUI in a Magic Shell by
 using the following command –
 
-Magic -T \<Tech File Path\> \<Mag File\>
+`magic -T \<Tech File Path\> \<Mag File\>`
 
 <img src="./media/image133.png"
 style="width:7.0875in;height:0.15694in" />
@@ -1298,7 +1298,7 @@ This suggests that li1 layer has Horizontal Tracks of Pitch 0.46 with
 the origin from 0.23. Similarly, we can understand for the vertical li1
 layer Pitch is 0.34 and Origin is at 0.17. We will try to replicate this
 grid on Magic so that we can verify the above mentioned two conditions.
-To do so we will have to use ***grid*** command in magic shell shown
+To do so we will have to use `***grid***` command in magic shell shown
 below –
 
 <img src="./media/image137.png" style="width:7.0875in;height:6.03819in"
@@ -1348,8 +1348,8 @@ alt="Text Description automatically generated" />
 6.  Step – 6. Now we will save the following file as sky130_vsdinv.mag
     to mark it as customized inv.
 
-7.  Step – 7. Open the new Layout file and in the terminal write ‘***lef
-    write***’ this will output a LEF file from the layout file.  
+7.  Step – 7. Open the new Layout file and in the terminal write `'***lef
+    write***'` this will output a LEF file from the layout file.  
       
     <img src="./media/image142.png" style="width:4.03226in;height:1.33609in"
     alt="Text Description automatically generated" />
@@ -1367,7 +1367,7 @@ defined and now all the ports defined are changed to corresponding Pins.
 The port number defined in the previous stage controls the definition
 order of the Pins in the custom LEF.
 
-**Lab – Data Preparation for Including Custom LEF inverter in openlane
+## **Lab – Data Preparation for Including Custom LEF inverter in openlane
 Flow**
 
 To include the LEF file into the current openlane flow copy the newly
@@ -1386,7 +1386,7 @@ alt="Text Description automatically generated" />
 There are 3 different libraries present which need to be copied, please
 note that all of them are characterized for a different process corner.
 
-**Lab – Running OpenLane with including New Custom INV cell**
+## **Lab – Running OpenLane with including New Custom INV cell**
 
 Beforee we run the docker command and start a new synthesis with custom
 INV cell we need to set the configuration parameters so that the tool
@@ -1408,7 +1408,7 @@ But we need to override the current work done with the pre-existing inv
 cell. For launching overwriting in a pre-generated run please use the
 following command –
 
-Prep -design picorv32a -tag \<directory name\>
+`prep -design picorv32a -tag \<directory name\>`
 
 After running this, we need to set the lef’s again so that openlane
 takes our Lef files –
@@ -1417,7 +1417,7 @@ takes our Lef files –
 style="width:6.26806in;height:0.775in" />
 
 Next step is to finally run the synthesis again using
-***‘run_synthesis’*** command. While the run is progressing it will
+`***‘run_synthesis’***` command. While the run is progressing it will
 generate a table which will list out the total number of used cell for
 each type of cell. Verify the number of cells used for the custom
 inverter ***“sky130_vsdinv”***.
@@ -1441,7 +1441,7 @@ searching the cell so we will have to do it manually.
 <img src="./media/image151.png" style="width:5.28333in;height:3.632in"
 alt="Timeline Description automatically generated" />
 
-**Lab – Resolving Huge Timing Violations Observed**
+## **Lab – Resolving Huge Timing Violations Observed**
 
 In our previous lab we observed very high timing violation but a good
 news was our custom LEF cell is getting picked by yosys automatically.
@@ -1456,7 +1456,7 @@ alt="Text Description automatically generated" />
 
 Before running the synthesis do make sure we delete the previous RTL
 file generated by run_synthesis. And then run the command
-***‘run_synthesis’***
+`***‘run_synthesis’***`
 
 <img src="./media/image153.png" style="width:4.51099in;height:1.52132in"
 alt="Text Description automatically generated" />
@@ -1468,13 +1468,13 @@ time usage for our custom Inv has increased automatically.
 <img src="./media/image154.png" style="width:4.43358in;height:1.56742in"
 alt="Text Description automatically generated" />
 
-%age Area Increase = (209181.872 – 147950.6464) / 147950.6466 \* 100 =
-**41.3%**
+`%age Area Increase = (209181.872 – 147950.6464) / 147950.6466 \* 100 =
+**41.3%**`
 
-%age decrease in slack = (-26.53 – (-2.95)) / (-26.53) \* 100 =
-**88.88%**
+`%age decrease in slack = (-26.53 – (-2.95)) / (-26.53) \* 100 =
+**88.88%**`
 
-Now we will again ***‘run_floorplan’*** and ***‘run_routing’.*** We can
+Now we will again `***‘run_floorplan’***` and `***‘run_routing’.***` We can
 confirm from the DEF that the custom cell should be present in the
 updated def from the floorplan. In our case the cell is present and it
 is being used by yosys during synthesis effectively.
@@ -1491,7 +1491,7 @@ the VDD & VSS Rails.
 <img src="./media/image157.png" style="width:6.472in;height:3.80492in"
 alt="Graphical user interface, application Description automatically generated" />
 
-**Theory – Understanding Static Timing Analysis**
+## **Theory – Understanding Static Timing Analysis**
 
 Hold Time: Hold time is defined as the minimum amount of time after the
 clock's active edge during which data must be stable.
@@ -1500,8 +1500,8 @@ Setup Time: Setup time is the minimum amount of time the data signal
 should be held steady before the clock event so that the data are
 reliably sampled by the clock.
 
-In real cases the combination delay should be less than ***Time Period –
-Setup Time*** for the Next Flop
+In real cases the combination delay should be less than `***Time Period –
+Setup Time***` for the Next Flop
 
 STA is relatively easy to resolve when the clocks are assumed as ideal
 but in real case clocks there are lot of uncertainties involved like
@@ -1513,14 +1513,14 @@ represented by the below figure.
 <img src="./media/image158.png" style="width:7.0875in;height:1.49861in"
 alt="Graphical user interface Description automatically generated" />
 
-Now the formulation of combination delay changes to ***Time Period –
-Setup Time – Setup Uncertainty*** in which setup uncertainty is driven
+Now the formulation of combination delay changes to `***Time Period –
+Setup Time – Setup Uncertainty***` in which setup uncertainty is driven
 from the clock jitter.
 
 <img src="./media/image159.png" style="width:7.0875in;height:3.37431in"
 alt="Graphical user interface Description automatically generated" />
 
-**Lab – Setting up STA Analysis for Picorv32a design \[OpenSTA\]**
+## **Lab – Setting up STA Analysis for Picorv32a design \[OpenSTA\]**
 
 After performing the routing we saw that out design still is prone to
 STA issues, now we will be running the STA tool in this lab in order to
@@ -1545,18 +1545,18 @@ Please note that we need to define the correct Driving Cell that will be
 used for performing CTS. Along with correct characteristics for the
 same.
 
-***‘Create_clock’*** is the main command which will generate the clock
+`***‘Create_clock’***` is the main command which will generate the clock
 at a certain position in the design.
 
 <img src="./media/image161.png"
 style="width:6.99633in;height:3.80589in" />
 
-**Lab – Setting up STA Analysis for Picorv32a design \[OpenSTA\]**
+## **Lab – Setting up STA Analysis for Picorv32a design \[OpenSTA\]**
 
 Next step will be to run STA on the design in order to do so, go to your
 linux shell an type the following command –
 
-Sta pre_sta.conf
+`sta pre_sta.conf`
 
 <img src="./media/image162.png" style="width:6.91896in;height:1.51089in"
 alt="Text Description automatically generated" />
@@ -1569,7 +1569,7 @@ tweaking of setup is required to resolve it.
 <img src="./media/image163.png" style="width:6.26806in;height:4.59444in"
 alt="A picture containing text Description automatically generated" />
 
-**Theory – Clock Tree Synthesis**
+## **Theory – Clock Tree Synthesis**
 
 Clock tree synthesis mean to create such a network for the clock so that
 the slew should be as close to 0 as possible throughout the design. The
@@ -1601,7 +1601,7 @@ issues are resolved.
 <img src="./media/image166.png"
 style="width:7.0875in;height:3.46181in" />
 
-**Theory – Clock Net Shielding and Crosstalk’s**
+## **Theory – Clock Net Shielding and Crosstalk’s**
 
 When multiple different nets are running parallel to each they can have
 a coupling capacitance among them due to which the other net can get
@@ -1631,7 +1631,7 @@ clocks so that the coupling cap reduces. Because VDD and VSS generally
 don’t switch and therefore the actual glitch appearing due them will be
 almost nil and wont harm the circuitry as well as logic.
 
-**Lab – Running CTS on Passed STA design using TritonCTS**
+## **Lab – Running CTS on Passed STA design using TritonCTS**
 
 There are only few settings which are provided to Openlane for
 performing the CTS. We can use the default values as it is to run Clock
@@ -1643,7 +1643,7 @@ style="width:7.0875in;height:1.25208in" />
 To run CTS now we need to use the following command in the openlane
 shell–
 
-Run_cts
+`run_cts`
 
 <img src="./media/image170.png"
 style="width:7.18612in;height:1.75712in" />
@@ -1670,13 +1670,13 @@ the slack can be effected which can cause more STA violations. So
 basically we need to perform STA over the Post-CTS netlist and confirm
 whether the slack values are violating or not.
 
-**Lab – Running STA again on POST CTS Netlist**
+## **Lab – Running STA again on POST CTS Netlist**
 
 In order to perform STA on the Post CTS netlist we need to launch
 openROAD under openLANE shell. Which is easy we have to write the
 following command in the shell to launch it –
 
-Openroad
+`openroad`
 
 It will perform the basic checks and load the design and set the LEF and
 DEF for us to perform further actions.
@@ -1696,8 +1696,8 @@ min and max slack.
 alt="Text Description automatically generated" />
 
 After checking the reports again, we observed min and max slack
-violations. Min slack now observed was -2.153 and Max Slack now observed
-was -3.1580.
+violations. Min slack now observed was `-2.153` and Max Slack now observed
+was `-3.1580`.
 
 <img src="./media/image177.png" style="width:6.26806in;height:1.85139in"
 alt="Text Description automatically generated" />
@@ -1714,7 +1714,7 @@ accordingly which were not saved in the db.
 style="width:6.96636in;height:2.4613in" />
 
 After library change we observed that the min slack value changed to
--0.0672 and Max slack value changed to 5.1873.
+`-0.0672` and Max slack value changed to `5.1873.`
 
 <img src="./media/image180.png" style="width:7.0458in;height:1.82351in"
 alt="Text Description automatically generated" />
@@ -1743,8 +1743,8 @@ alt="Text Description automatically generated" />
 <img src="./media/image185.png" style="width:7.18354in;height:1.33706in"
 alt="Text Description automatically generated" />
 
-After this the new final min updated slack is 0.2397 and maximum slack
-is 5.4044. Since both the slacks are positive now we can stop these
+After this the new final min updated slack is `0.2397` and maximum slack
+is `5.4044.` Since both the slacks are positive now we can stop these
 iterations and generate a final Post-CTS def for further procedures.
 
 <img src="./media/image186.png" style="width:7.17348in;height:2.94776in"
@@ -1759,9 +1759,9 @@ mentioned in the below figure –
 <img src="./media/image188.png" style="width:4.3375in;height:2.52532in"
 alt="A picture containing text Description automatically generated" />
 
-**Day – 5 Final Steps for RTL2GDS using TritonRoute and openSTA**
+# **Day – 5 Final Steps for RTL2GDS using TritonRoute and openSTA**
 
-**Theory – Understanding Routing Algorithms**
+## **Theory – Understanding Routing Algorithms**
 
 Routing Algorithm basically tends to find the best way to connect from
 one pin (source) to another (destination) with least number of twists
@@ -1815,7 +1815,7 @@ Steps for performing Maze Routing –
 2.  For bigger design with millions of pins the memory requirement will
     go up and it can’t be performed for very big designs.
 
-**Theory – DRC Checks for Routing**
+## **Theory – DRC Checks for Routing**
 
 There are a thousand of rules involved while routing a particular
 design. Design rules can vary based on the Layer of routing, structure,
@@ -1841,17 +1841,17 @@ style="width:3.19633in;height:2.704in" />
 <img src="./media/image192.png" style="width:3.1532in;height:2.76097in"
 alt="A screenshot of a video game Description automatically generated" />
 
-**Lab – Creating Power Distribution Network on Post-CTS design**
+## **Lab – Creating Power Distribution Network on Post-CTS design**
 
 To run routing over the design, we need to reload our post-cts database.
 To do so launch openlane shell under docker and use the following
 command –
 
-*./flow.tcl -interactive*
+`*./flow.tcl -interactive*
 
 *Package require openlane 0.9*
 
-*Prep -design picorv32a -tag \<run_area name\>*
+*Prep -design picorv32a -tag \<run_area name\>*`
 
 After loading the run-area, to check the correctness, we need to confirm
 whether the selected def is correct or not. For performing routing, we
@@ -1860,7 +1860,7 @@ need to use a post-cts def.
 <img src="./media/image193.png"
 style="width:6.26806in;height:0.51597in" />
 
-**Created PDN Details and Statistics**
+### **Created PDN Details and Statistics**
 
 Next steps would be to generate the PDN rails before performing signal
 routing. But in our case the PDN was already pre-generated during the
@@ -1890,7 +1890,7 @@ metal1 and finally gets connected to the Rails.
 <img src="./media/image197.png"
 style="width:6.26806in;height:4.15208in" />
 
-**Theory – Understanding TritonRoute**
+## **Theory – Understanding TritonRoute**
 
 In actual industry the routing process is very complicated as the
 insertion space is huge that’s why TritonRoute works as a twostep
@@ -1949,8 +1949,9 @@ start till and thereby following the chain like this.
 <img src="./media/image203.png" style="width:6.28087in;height:3.63769in"
 alt="Graphical user interface, text Description automatically generated" />
 
-**Theory – Routing Algorithm of TritonRoute  
-**The algorithm used for TritonRoute is fairly simple and it basically
+## **Theory – Routing Algorithm of TritonRoute  
+
+The algorithm used for TritonRoute is fairly simple and it basically
 stores the Point 1 to Point 2 multiple routes and their corresponding
 cost (could be a factor of wire length) and once the matrix is defined
 it basically runs a Minimum Spanning Tree in order to reduce the cost
@@ -1961,7 +1962,7 @@ process.
 <img src="./media/image204.png" style="width:6.62547in;height:3.89894in"
 alt="Text Description automatically generated" />
 
-**Lab – Routing the Design using TritonRoute**
+## **Lab – Routing the Design using TritonRoute**
 
 Next steps after connecting the Power and Ground Rails and generating
 the complete PDN is to connect the rest of the design for which
@@ -1969,7 +1970,7 @@ TritonRoute is used. Before proceeding with routing the DEF selected
 should be post PDN def. In order to run TritonRoute for routing the
 design perform the following command –
 
-*Run_routing*
+`*Run_routing*`
 
 <img src="./media/image205.png"
 style="width:6.26806in;height:0.50417in" />
@@ -1983,7 +1984,7 @@ Here we have used ROUTING_STRATEGY 0 for demonstration purposes.
 <img src="./media/image206.png" style="width:7.0875in;height:3.1in"
 alt="Text Description automatically generated" />
 
-**Logs and Reports from Triton Route**
+### **Logs and Reports from Triton Route**
 
 After running run_routing tool will perform a lot of iterations for
 optimizing the routing through which it will obtain the best solution
